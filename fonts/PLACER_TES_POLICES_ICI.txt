@@ -1,0 +1,10 @@
+Place ici tes fichiers de police (.woff2 de préférence, ou .otf/.ttf) 
+avec exactement ces noms :
+
+- Qalinka.woff2  (ou Qalinka.otf)
+- Javinra.woff2  (ou Javinra.otf)
+- Panigale.woff2 (ou Panigale.otf)
+
+Ces polices sont déjà appelées dans css/style.css via @font-face.
+Tant qu'elles ne sont pas ajoutées, le site utilise Poppins en secours 
+automatique — donc rien ne casse en attendant.

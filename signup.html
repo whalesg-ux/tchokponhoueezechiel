@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inscription — Tchokponhoue Ezechiel</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="auth-wrapper">
+  <div class="auth-card">
+    <div class="logo-row">
+      <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1785027102/image_0_bm09fx.png" alt="Logo Ezechiel Design">
+  
+    </div>
+    <h1>Créer un compte</h1>
+    <p class="sub">Accédez à votre tableau de bord privé</p>
+
+    <div id="signup-error" class="error-msg"></div>
+
+    <form id="signup-form">
+      <div class="form-group">
+        <label for="signup-name">Nom complet</label>
+        <input type="text" id="signup-name" placeholder="Tchokponhoue Ezechiel">
+      </div>
+      <div class="form-group">
+        <label for="signup-email">Email</label>
+        <input type="email" id="signup-email" placeholder="votre@email.com">
+      </div>
+      <div class="form-group">
+        <label for="signup-password">Mot de passe</label>
+        <input type="password" id="signup-password" placeholder="6 caractères minimum">
+      </div>
+      <button type="submit" class="btn btn-primary">S'inscrire</button>
+    </form>
+    <style>
+      /* =========================================================
+   FOOTER avec conteneur intégré (à copier dans tous les CSS)
+========================================================= */
+footer {
+  background: var(--dark);
+  color: var(--gray-400);
+  padding: 48px 0 20px;
+}
+
+footer .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+footer .socials {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  margin: 0;
+}
+
+footer .socials a {
+  width: 36px;
+  height: 36px;
+  border: 1px solid #444;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  transition: all .2s;
+}
+footer .socials a:hover {
+  background: var(--orange-600);
+  border-color: var(--orange-600);
+}
+
+footer .bottom {
+  border-top: 1px solid #333;
+  padding-top: 16px;
+  margin-top: 8px;
+  font-size: 0.8rem;
+  width: 100%;
+  text-align: center;
+}
+    </style>
+
+    <div class="auth-footer">
+      Déjà un compte ? <a href="login.html">Se connecter</a>
+    </div>
+  </div>
+</div>
+
+<script src="js/auth.js"></script>
+</body>
+</html>
