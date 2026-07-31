@@ -1,14 +1,77 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact — Tchokponhoue Ezechiel</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="icon" href="https://res.cloudinary.com/nyke7lhc/image/upload/v1785027102/image_0_bm09fx.png">
-<link rel="stylesheet" href="css/style.css">
-<style>body{padding-top:110px;}</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Ezechiel Tchokponhoue (Fatez)</title>
+  <meta name="description" content="Contactez Ezechiel Tchokponhoue, développeur et designer basé au Bénin. Envoyez-lui un message pour vos projets.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="https://res.cloudinary.com/nyke7lhc/image/upload/v1785027102/image_0_bm09fx.png">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body { padding-top: 110px; }
+    /* Cacher le message de succès au départ */
+    #contact-success {
+      display: none;
+      background: #E9F9EE;
+      color: #1F9D55;
+      padding: 12px;
+      border-radius: 10px;
+      margin-bottom: 16px;
+    }
+    #contact-success.show {
+      display: block;
+    }
+    /* Responsive du burger (si non défini dans style.css) */
+    .burger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+    .burger span {
+      width: 28px;
+      height: 3px;
+      background: var(--dark, #1A1A1A);
+      border-radius: 3px;
+      transition: 0.3s;
+    }
+    .burger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+    .burger.active span:nth-child(2) { opacity: 0; }
+    .burger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+    @media (max-width: 900px) {
+      .burger { display: flex; }
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background: rgba(255,255,255,0.95);
+        backdrop-filter: blur(16px);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        padding: 20px 24px;
+        gap: 16px;
+        border-radius: 0 0 20px 20px;
+        box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        border-top: 1px solid rgba(255,255,255,0.35);
+        z-index: 999;
+      }
+      .nav-links.open { display: flex; }
+      .nav-auth { display: none; }
+      .nav-auth.mobile-show {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+        width: 100%;
+      }
+      .nav-auth.mobile-show .btn { width: 100%; justify-content: center; }
+    }
+  </style>
 </head>
 <body>
 
@@ -16,20 +79,23 @@
   <div class="container">
     <a href="index.html" class="logo">
       <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1785027102/image_0_bm09fx.png" alt="Logo Ezechiel Design">
-
     </a>
-    <nav class="nav-links">
+    <nav class="nav-links" id="navLinks">
       <a href="index.html">Accueil</a>
       <a href="projects.html">Projet</a>
       <a href="testimonials.html">Témoignages</a>
-      <a href="about.html">A propos</a>
-      <a href="contact.html" class="active">Contacte</a>
+      <a href="about.html">À propos</a>
+      <a href="contact.html" class="active">Contact</a>
+      <!-- Boutons mobiles -->
+      <div class="nav-auth mobile-show">
+        <a href="login.html" class="btn btn-outline">Connexion</a>
+        <a href="signup.html" class="btn btn-primary">Inscription</a>
+      </div>
     </nav>
-    <div class="nav-auth">
-      <a href="login.html" class="btn btn-outline">Connexion</a>
-      <a href="signup.html" class="btn btn-primary">Inscription</a>
-    </div>
-    <button class="burger"><span></span><span></span><span></span></button>
+  
+    <button class="burger" id="burgerBtn" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </header>
 
@@ -40,33 +106,34 @@
     <p class="section-desc">Une idée en tête ? Contactez-moi et donnons vie à votre identité visuelle.</p>
 
     <div class="contact-grid">
+      <!-- FORMULAIRE -->
       <form id="contact-form">
-        <div id="contact-success" class="error-msg" style="background:#E9F9EE; color:#1F9D55;">
-          Votre message a bien été envoyé. Je vous répondrai rapidement !
+        <div id="contact-success">✅ Votre message a bien été envoyé. Je vous répondrai rapidement !</div>
+
+        <div class="form-group">
+          <label for="contact-name">Nom complet *</label>
+          <input type="text" id="contact-name" placeholder="Votre nom" required>
         </div>
         <div class="form-group">
-          <label for="contact-name">Nom complet</label>
-          <input type="text" id="contact-name" placeholder="Votre nom">
-        </div>
-        <div class="form-group">
-          <label for="contact-email">Email</label>
-          <input type="email" id="contact-email" placeholder="votre@email.com">
+          <label for="contact-email">Email *</label>
+          <input type="email" id="contact-email" placeholder="votre@email.com" required>
         </div>
         <div class="form-group">
           <label for="contact-subject">Sujet</label>
           <input type="text" id="contact-subject" placeholder="Objet de votre message">
         </div>
         <div class="form-group">
-          <label for="contact-message">Message</label>
-          <textarea id="contact-message" rows="5" placeholder="Décrivez votre projet..."></textarea>
+          <label for="contact-message">Message *</label>
+          <textarea id="contact-message" rows="5" placeholder="Décrivez votre projet..." required></textarea>
         </div>
         <button type="submit" class="btn btn-primary" style="width:100%;">Envoyer le message</button>
       </form>
 
+      <!-- INFOS CONTACT -->
       <div class="contact-info-card">
         <div class="item">
           <div class="icon">📞</div>
-          <div><strong>Téléphone</strong><br>0160067966</div>
+          <div><strong>Téléphone</strong><br>+229 01 60 06 79 66</div>
         </div>
         <div class="item">
           <div class="icon">✉️</div>
@@ -74,11 +141,11 @@
         </div>
         <div class="item">
           <div class="icon">📍</div>
-          <div><strong>Localisation</strong><br>Disponible en remote — partout dans le monde</div>
+          <div><strong>Localisation</strong><br>Bénin · Disponible en remote</div>
         </div>
         <div class="item">
           <div class="icon">🕒</div>
-          <div><strong>Disponibilité</strong><br>Lundi – Samedi, 24 – 24</div>
+          <div><strong>Disponibilité</strong><br>Lundi – Samedi, 24/24</div>
         </div>
       </div>
     </div>
@@ -88,23 +155,30 @@
 <footer>
   <div class="container">
     <h3 style="color:#fff;">Tchokponhoue Ezechiel</h3>
-<div class="socials">
-  <a href="https://www.instagram.com/ezechielwhalesg?igsh=MXA4Z2szbmtjbHowNQ%3D%3D&utm_source=qr" aria-label="Instagram" target="_blank" rel="noopener noreferrer" style="color: #E4405F;">
-    <i class="fab fa-instagram"></i>
-  </a>
-  <a href="https://www.linkedin.com/in/ezéchiel-tchokponhoue-5a6766263?utm_source=share_via&utm_content=profile&utm_medium=member_android" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" style="color: #0A66C2;">
-    <i class="fab fa-linkedin-in"></i>
-  </a>
-  <a href="https://wa.me/message/AAXNLW3VI47VI1" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer" style="color: #25D366;">
-    <i class="fab fa-whatsapp"></i>
-  </a>
-  <a href="https://www.tiktok.com/@ezechielwhalesg?_r=1&_t=ZS-98OGK7NgHQu" aria-label="TikTok" target="_blank" rel="noopener noreferrer" style="color: #FE2C55;">
-    <i class="fab fa-tiktok"></i>
-  </a>
-</div>
+    <div class="socials">
+      <a href="https://www.instagram.com/ezechielwhalesg" target="_blank" aria-label="Instagram" style="color: #E4405F;"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/ez%C3%A9chiel-tchokponhoue-5a6766263" target="_blank" aria-label="LinkedIn" style="color: #0A66C2;"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://wa.me/message/AAXNLW3VI47VI1" target="_blank" aria-label="WhatsApp" style="color: #25D366;"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://www.tiktok.com/@ezechielwhalesg" target="_blank" aria-label="TikTok" style="color: #FE2C55;"><i class="fab fa-tiktok"></i></a>
+    </div>
     <div class="bottom">© 2026 Proppese with Narroq - Ezeglabs with Nextgen. Tous droits réservés.</div>
   </div>
 </footer>
+
+<!-- JavaScripts -->
+<script>
+  // Menu burger
+  document.addEventListener('DOMContentLoaded', function() {
+    const burger = document.getElementById('burgerBtn');
+    const navLinks = document.getElementById('navLinks');
+    if (burger && navLinks) {
+      burger.addEventListener('click', function() {
+        burger.classList.toggle('active');
+        navLinks.classList.toggle('open');
+      });
+    }
+  });
+</script>
 <script src="js/main.js"></script>
 <script src="js/validation.js"></script>
 </body>

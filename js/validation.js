@@ -1,37 +1,41 @@
 // ============================
-// VALIDATION.JS — Envoi réel via EmailJS
+// VALIDATION.JS — Envoi via EmailJS
 // ============================
 
-// 1. Charger la bibliothèque EmailJS depuis le CDN
+// Charger la bibliothèque EmailJS (si pas encore chargée)
 (function() {
   if (typeof emailjs === 'undefined') {
     const script = document.createElement('script');
     script.src = 'https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js';
     script.onload = function() {
-      emailjs.init('72a7hfG4OdpTjHKjx');
+      // 🔑 REMPLACE PAR TA CLÉ PUBLIQUE (ex: user_abc123)
+      emailjs.init('VOTRE_CLE_PUBLIQUE_EMAILJS');
     };
     document.head.appendChild(script);
   } else {
-    emailjs.init('72a7hfG4OdpTjHKjx');
+    emailjs.init('VOTRE_CLE_PUBLIQUE_EMAILJS');
   }
 })();
 
 const contactForm = document.getElementById('contact-form');
 
 if (contactForm) {
-  contactForm.addEventListener('submit', (e) => {
+  contactForm.addEventListener('submit', function(e) {
     e.preventDefault();
 
+    // Récupérer les champs
     const name = document.getElementById('contact-name').value.trim();
     const email = document.getElementById('contact-email').value.trim();
+    const subject = document.getElementById('contact-subject').value.trim();
     const message = document.getElementById('contact-message').value.trim();
     const successBox = document.getElementById('contact-success');
 
+    // Regex email
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    // ---- VALIDATION ----
+    // Validations
     if (!name || !email || !message) {
-      alert("Merci de remplir tous les champs.");
+      alert("Merci de remplir tous les champs obligatoires (*).");
       return;
     }
     if (!emailRegex.test(email)) {
@@ -39,12 +43,12 @@ if (contactForm) {
       return;
     }
 
-    // ---- PRÉPARATION DES DONNÉES POUR EMAILJS ----
+    // Préparer les données pour EmailJS
     const templateParams = {
       from_name: name,
       from_email: email,
-      message: message,
-      // 
+      subject: subject || "Sans objet",
+      message: message
     };
 
     // ---- ENVOI VERS EMAILJS ----
@@ -54,13 +58,13 @@ if (contactForm) {
       templateParams
     )
     .then(function(response) {
-      console.log('✅ Email envoyé !', response.status, response.text);
+      console.log('✅ Email envoyé !', response.status);
       successBox.classList.add('show');
       contactForm.reset();
       setTimeout(() => successBox.classList.remove('show'), 6000);
     })
     .catch(function(error) {
-      console.error('❌ Erreur d\'envoi :', error);
+      console.error('❌ Erreur EmailJS :', error);
       alert("Une erreur est survenue. Veuillez réessayer plus tard.");
     });
   });

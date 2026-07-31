@@ -5,12 +5,21 @@
 document.addEventListener('DOMContentLoaded', () => {
 
   // --- Menu mobile (burger) ---
+  // On ouvre/ferme la navbar entière (nav-links + nav-auth réutilisent
+  // les MÊMES boutons déjà présents dans le HTML, rien n'est dupliqué).
   const burger = document.querySelector('.burger');
-  const navLinks = document.querySelector('.nav-links');
+  const navbar = document.querySelector('.navbar');
 
-  if (burger && navLinks) {
+  if (burger && navbar) {
     burger.addEventListener('click', () => {
-      navLinks.classList.toggle('open');
+      navbar.classList.toggle('open');
+    });
+
+    // Ferme le menu automatiquement quand on clique un lien ou un bouton
+    navbar.querySelectorAll('.nav-links a, .nav-auth a').forEach(el => {
+      el.addEventListener('click', () => {
+        navbar.classList.remove('open');
+      });
     });
   }
 
