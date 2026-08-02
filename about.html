@@ -57,7 +57,7 @@
       padding: 0 20px;
     }
     a { text-decoration: none; color: inherit; }
-    img { max-width: 100%; display: block; }
+    img { max-width: 100%; display: block; height: auto; }
 
     /* ===== PALETTE ORANGE ===== */
     :root {
@@ -482,15 +482,28 @@
         font-size: 2rem;
       }
     }
+
+    @media (max-width: 600px) {
+      .carousel-3d-container {
+        height: 300px;
+      }
+      .carousel-3d-slide {
+        width: 140px;
+        height: 190px;
+        margin-left: -70px;
+        margin-top: -95px;
+      }
+    }
+
     @media (max-width: 480px) {
       .carousel-3d-container {
         height: 280px;
       }
       .carousel-3d-slide {
-        width: 130px;
-        height: 180px;
-        margin-left: -65px;
-        margin-top: -90px;
+        width: 120px;
+        height: 170px;
+        margin-left: -60px;
+        margin-top: -85px;
       }
       .section-title { font-size: 1.6rem; }
       .about-text p { font-size: 0.95rem; }
@@ -592,7 +605,6 @@
         <a href="testimonials.html">Témoignages</a>
         <a href="about.html" class="active">À propos</a>
         <a href="contact.html">Contact</a>
-       
       </nav>
       <div class="nav-auth">
         <a href="login.html" class="btn btn-outline">Connexion</a>
@@ -625,21 +637,21 @@
           <span class="section-eyebrow"><i class="fas fa-user-circle" style="margin-right:6px;"></i> Mon histoire</span>
           <h2 class="section-title">De Ouesse à l'innovation numérique</h2>
 
-         <p>
-  Je m'appelle <strong class="highlight-text">Ezechiel Tchokponhoue</strong>, né le <strong class="highlight-text">28 septembre 2006</strong>. Surnommé <strong class="highlight-text">"Fatez"</strong> depuis mon enfance, je suis le fils de <strong>TCHOKPONHOUE T. Yves</strong>, photographe passionné, et de <strong>FAGLA Crépine E.</strong>, coiffeuse de talent. C'est dans cette double influence — l'art visuel de mon père et la minutie de ma mère — que j'ai puisé ma sensibilité créative et mon goût pour l'esthétique.
-</p>
+          <p>
+            Je m'appelle <strong class="highlight-text">Ezechiel Tchokponhoue</strong>, né le <strong class="highlight-text">28 septembre 2006</strong>. Surnommé <strong class="highlight-text">"Fatez"</strong> depuis mon enfance, je suis le fils de <strong>TCHOKPONHOUE T. Yves</strong>, photographe passionné, et de <strong>FAGLA Crépine E.</strong>, coiffeuse de talent. C'est dans cette double influence — l'art visuel de mon père et la minutie de ma mère — que j'ai puisé ma sensibilité créative et mon goût pour l'esthétique.
+          </p>
 
-<p>
-  Mon parcours scolaire commence à l'<strong>EPP Laminou</strong> où j'obtiens mon <strong>CEP en 2016</strong>, avant de poursuivre au <strong>CEG1</strong> pour décrocher mon <strong>BEPC en 2021</strong>. Ces années m'ont forgé une discipline et une rigueur qui me servent encore aujourd'hui dans mes projets.
-</p>
+          <p>
+            Mon parcours scolaire commence à l'<strong>EPP Laminou</strong> où j'obtiens mon <strong>CEP en 2016</strong>, avant de poursuivre au <strong>CEG1</strong> pour décrocher mon <strong>BEPC en 2021</strong>. Ces années m'ont forgé une discipline et une rigueur qui me servent encore aujourd'hui dans mes projets.
+          </p>
 
-<p>
-  <strong class="highlight-text">En 2016</strong>, j'ai fait mon entrée dans le monde de la tech, en autodidacte. Fasciné par la création d'interfaces et le design, j'ai rapidement évolué vers des technologies de pointe pour allier <strong>esthétique et performance</strong>. Aujourd'hui, je m'intéresse particulièrement à l'<strong>intelligence artificielle</strong>, la <strong>blockchain</strong> et la <strong>cybersécurité</strong>.
-</p>
+          <p>
+            <strong class="highlight-text">En 2016</strong>, j'ai fait mon entrée dans le monde de la tech, en autodidacte. Fasciné par la création d'interfaces et le design, j'ai rapidement évolué vers des technologies de pointe pour allier <strong>esthétique et performance</strong>. Aujourd'hui, je m'intéresse particulièrement à l'<strong>intelligence artificielle</strong>, la <strong>blockchain</strong> et la <strong>cybersécurité</strong>.
+          </p>
 
-<p>
-  Mon objectif : <strong class="highlight-text">résoudre des problèmes concrets à travers le design et la technologie</strong>.
-</p>
+          <p>
+            Mon objectif : <strong class="highlight-text">résoudre des problèmes concrets à travers le design et la technologie</strong>.
+          </p>
 
           <!-- COMPÉTENCES -->
           <h3 style="margin: 30px 0 16px;font-family:'Poppins',sans-serif;font-size:1.3rem;">
@@ -760,9 +772,21 @@
 
     // ===== CARROUSEL 3D =====
     const images = [
-      { src: 'https://res.cloudinary.com/nyke7lhc/image/upload/v1785260314/soes_ovdex7.webp', label: 'Ezechiel Tchokponhoue' },
-      { src: 'https://res.cloudinary.com/nyke7lhc/image/upload/v1785027102/image_0_bm09fx.png', label: 'Logo Ezechiel Design' },
-     { src: 'https://res.cloudinary.com/nyke7lhc/image/upload/v1785031516/file_00000000b3a471f6a47d6ed6ffd76f51_copie_w08fdq.png', label: 'Photo studio' }
+      { 
+        src: 'https://res.cloudinary.com/nyke7lhc/image/upload/v1785260314/soes_ovdex7.webp', 
+        label: 'Ezechiel Tchokponhoue',
+        srcset: 'https://res.cloudinary.com/nyke7lhc/image/upload/w_300/v1785260314/soes_ovdex7.webp 300w, https://res.cloudinary.com/nyke7lhc/image/upload/w_400/v1785260314/soes_ovdex7.webp 400w, https://res.cloudinary.com/nyke7lhc/image/upload/w_600/v1785260314/soes_ovdex7.webp 600w, https://res.cloudinary.com/nyke7lhc/image/upload/w_800/v1785260314/soes_ovdex7.webp 800w, https://res.cloudinary.com/nyke7lhc/image/upload/v1785260314/soes_ovdex7.webp 1200w'
+      },
+      { 
+        src: 'https://res.cloudinary.com/nyke7lhc/image/upload/v1785027102/image_0_bm09fx.png', 
+        label: 'Logo Ezechiel Design',
+        srcset: 'https://res.cloudinary.com/nyke7lhc/image/upload/w_300/v1785027102/image_0_bm09fx.png 300w, https://res.cloudinary.com/nyke7lhc/image/upload/w_400/v1785027102/image_0_bm09fx.png 400w, https://res.cloudinary.com/nyke7lhc/image/upload/w_600/v1785027102/image_0_bm09fx.png 600w, https://res.cloudinary.com/nyke7lhc/image/upload/w_800/v1785027102/image_0_bm09fx.png 800w, https://res.cloudinary.com/nyke7lhc/image/upload/v1785027102/image_0_bm09fx.png 1200w'
+      },
+      { 
+        src: 'https://res.cloudinary.com/nyke7lhc/image/upload/v1785031516/file_00000000b3a471f6a47d6ed6ffd76f51_copie_w08fdq.png', 
+        label: 'Photo studio',
+        srcset: 'https://res.cloudinary.com/nyke7lhc/image/upload/w_300/v1785031516/file_00000000b3a471f6a47d6ed6ffd76f51_copie_w08fdq.png 300w, https://res.cloudinary.com/nyke7lhc/image/upload/w_400/v1785031516/file_00000000b3a471f6a47d6ed6ffd76f51_copie_w08fdq.png 400w, https://res.cloudinary.com/nyke7lhc/image/upload/w_600/v1785031516/file_00000000b3a471f6a47d6ed6ffd76f51_copie_w08fdq.png 600w, https://res.cloudinary.com/nyke7lhc/image/upload/w_800/v1785031516/file_00000000b3a471f6a47d6ed6ffd76f51_copie_w08fdq.png 800w, https://res.cloudinary.com/nyke7lhc/image/upload/v1785031516/file_00000000b3a471f6a47d6ed6ffd76f51_copie_w08fdq.png 1200w'
+      }
     ];
 
     const track = document.getElementById('carouselTrack');
@@ -771,13 +795,19 @@
     const totalSlides = images.length;
     const angleStep = 360 / totalSlides;
 
-    // Générer les slides
+    // Générer les slides avec srcset, sizes et loading lazy
     images.forEach((img, i) => {
       const slide = document.createElement('div');
       slide.className = 'carousel-3d-slide';
       slide.style.transform = `rotateY(${i * angleStep}deg) translateZ(320px)`;
       slide.innerHTML = `
-        <img src="${img.src}" alt="${img.label}" loading="lazy">
+        <img 
+          src="${img.src}" 
+          srcset="${img.srcset}" 
+          sizes="(max-width: 480px) 300px, (max-width: 600px) 400px, (max-width: 900px) 600px, 800px"
+          alt="${img.label}" 
+          loading="lazy"
+        >
         <div class="slide-label">${img.label}</div>
       `;
       slide.querySelector('img').addEventListener('click', function(e) {
@@ -847,4 +877,3 @@
   </script>
 </body>
 </html>
-<script src="app.js"></script>
