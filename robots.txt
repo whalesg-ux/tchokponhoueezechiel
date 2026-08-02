@@ -1,3 +1,18 @@
 User-agent: *
 Allow: /
+Disallow: /login.html
+Disallow: /signup.html
+Disallow: /admin/
+Sitemap: https://tchokponhoueezechiel.vercel.app/sitemap.xml
+Host: https://tchokponhoueezechiel.vercel.app
+
+User-agent: Googlebot
+Allow: /
+Disallow: /login.html
+Disallow: /signup.html
+
+User-agent: Bingbot
+Allow: /
+
+Crawl-delay: 5
 Sitemap: https://tchokponhoueezechiel.vercel.app/sitemap.xml

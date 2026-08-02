@@ -1,535 +1,769 @@
 <!DOCTYPE html>
 <html lang="fr">
-<<head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tchokponhoue Ezechiel</title>
     
-    <!-- SDK JavaScript de Cloudinary  -->
+    <!-- ===== TITRE SEO ===== -->
+    <title>Projets | Ezechiel Tchokponhoue (Fatez) – Designer & Développeur Web Bénin</title>
+    
+    <!-- ===== META DESCRIPTION ===== -->
+    <meta name="description" content="Découvrez les projets d'Ezechiel Tchokponhoue, alias Fatez. Branding, logo design, identité visuelle, développement web et solutions IA. Portfolio complet du designer et développeur basé au Bénin." />
+    <meta name="keywords" content="projets Ezechiel Tchokponhoue, portfolio designer Bénin, branding, logo design, identité visuelle, développement web, Fatez, Narroq, Proppese, Ezeglabs" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+    <link rel="canonical" href="https://ezechiel-design.com/projects.html" />
+    
+    <!-- ===== OPEN GRAPH ===== -->
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Projets | Ezechiel Tchokponhoue – Designer & Développeur Web" />
+    <meta property="og:description" content="Portfolio complet d'Ezechiel Tchokponhoue : branding, logo design, identité visuelle, développement web et solutions IA." />
+    <meta property="og:url" content="https://ezechiel-design.com/projects.html" />
+    <meta property="og:image" content="https://res.cloudinary.com/nyke7lhc/image/upload/v1785260314/soes_ovdex7.webp" />
+    <meta property="og:image:alt" content="Ezechiel Tchokponhoue - Portfolio" />
+    <meta property="og:site_name" content="Ezechiel Tchokponhoue - Portfolio" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Projets | Ezechiel Tchokponhoue – Designer & Développeur Web" />
+    <meta name="twitter:description" content="Portfolio complet d'Ezechiel Tchokponhoue : branding, logo design, identité visuelle, développement web et solutions IA." />
+    <meta name="twitter:image" content="https://res.cloudinary.com/nyke7lhc/image/upload/v1785260314/soes_ovdex7.webp" />
+    
+    <!-- ===== GÉOLOCALISATION ===== -->
+    <meta name="geo.region" content="BJ" />
+    <meta name="geo.placename" content="Ouesse, Bénin" />
+    <meta name="geo.position" content="9.6319;2.3083" />
+    <meta name="ICBM" content="9.6319, 2.3083" />
+    
+    <!-- ===== VÉRIFICATION GOOGLE ===== -->
+    <meta name="google-site-verification" content="VOR9gQVoSw2v7YGsETFk_Vuqz0vDQyQ0HO1o94jUjKQ" />
+
+    <!-- ===== SCHÉMA JSON-LD ===== -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Portfolio d'Ezechiel Tchokponhoue",
+      "description": "Découvrez l'ensemble des projets réalisés par Ezechiel Tchokponhoue, designer et développeur web basé au Bénin.",
+      "url": "https://ezechiel-design.com/projects.html",
+      "author": {
+        "@type": "Person",
+        "name": "Ezechiel Tchokponhoue",
+        "alternateName": "Fatez",
+        "jobTitle": "Designer Graphique & Développeur Web",
+        "url": "https://ezechiel-design.com",
+        "sameAs": [
+          "https://www.instagram.com/ezechielwhalesg",
+          "https://www.linkedin.com/in/ez%C3%A9chiel-tchokponhoue-5a6766263",
+          "https://wa.me/message/AAXNLW3VI47VI1",
+          "https://www.tiktok.com/@ezechielwhalesg"
+        ]
+      },
+      "hasPart": [
+        {
+          "@type": "CreativeWork",
+          "name": "Neekle Structure et C'DIEU",
+          "description": "Création complète de l'identité visuelle, structure et du logo pour une marque de mode émergente.",
+          "keywords": "branding, identité visuelle, logo"
+        },
+        {
+          "@type": "CreativeWork",
+          "name": "Emersion d'une plateforme de Transit",
+          "description": "Design de logo moderne, structure et flux de construction en 3D et minimaliste pour une plateforme tech.",
+          "keywords": "logo design, structure, 3D"
+        },
+        {
+          "@type": "CreativeWork",
+          "name": "Flyer design support",
+          "description": "Refonte complète de la charte graphique et des supports de communication.",
+          "keywords": "flyer, identité visuelle, communication"
+        },
+        {
+          "@type": "CreativeWork",
+          "name": "Img Prompting",
+          "description": "Prompting Photo Générative de haute performance sur de l'image ISO IA2026.",
+          "keywords": "IA, génératif, image"
+        }
+      ]
+    }
+    </script>
+
+    <!-- ===== FONTS & ICÔNES ===== -->
     <script src="https://cdn.jsdelivr.net/npm/cloudinary-core@2.13.0/cloudinary-core-shrinkwrap.min.js"></script>
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-    <link href="css/style.css" rel="stylesheet" />
     <link rel="icon" href="https://res.cloudinary.com/nyke7lhc/image/upload/v1785027102/image_0_bm09fx.png">
 
-</head>
     <style>
-       /* ===== RESET & BASE ===== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Inter', sans-serif;
-    background: #f8fafc;
-    color: #0b1a33;
-    padding-top: 110px;
-    line-height: 1.6;
-}
-
-.container {
-    max-width: 1240px;
-    margin: 0 auto;
-    padding: 0 24px;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-img {
-    max-width: 100%;
-    display: block;
-}
-
-/* ===== NAVBAR – version glass ===== */
-.navbar {
-    position: fixed;
-    top: 16px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: calc(100% - 32px);
-    max-width: 1200px;
-    z-index: 1000;
-    background: rgba(255, 255, 255, 0.55);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(255, 255, 255, 0.35);
-    border-radius: 50px;
-    box-shadow: 0 10px 40px rgba(255, 107, 0, 0.15);
-}
-
-.navbar .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 24px;
-    flex-wrap: nowrap;
-}
-
-.logo img {
-    height: 36px;
-    width: auto;
-    border-radius: 8px;
-}
-
-.nav-links {
-    display: flex;
-    align-items: center;
-    gap: 32px;
-    font-weight: 500;
-    font-size: 0.9rem;
-}
-
-.nav-links a {
-    color: #1a1a1a;
-    transition: color 0.2s;
-    position: relative;
-    padding: 4px 0;
-}
-
-.nav-links a::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 0%;
-    height: 2.5px;
-    background: #FF6B00;
-    transition: width 0.25s;
-    border-radius: 4px;
-}
-
-.nav-links a:hover::after,
-.nav-links a.active::after {
-    width: 100%;
-}
-
-.nav-links a.active {
-    color: #FF6B00;
-    font-weight: 600;
-}
-
-.nav-auth {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.btn {
-    padding: 8px 20px;
-    border-radius: 40px;
-    font-weight: 600;
-    font-size: 0.85rem;
-    transition: all 0.25s;
-    border: none;
-    cursor: pointer;
-    display: inline-block;
-    text-align: center;
-}
-
-.btn-outline {
-    background: transparent;
-    border: 1.5px solid #FF6B00;
-    color: #FF6B00;
-}
-
-.btn-outline:hover {
-    background: #FF6B00;
-    color: #fff;
-}
-
-.btn-primary {
-    background: linear-gradient(135deg, #FF6B00, #EA580C);
-    color: #fff;
-    box-shadow: 0 6px 20px rgba(255, 107, 0, 0.35);
-}
-
-.btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 26px rgba(255, 107, 0, 0.45);
-}
-
-.burger {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 6px;
-}
-
-.burger span {
-    width: 24px;
-    height: 2px;
-    background: #1a1a1a;
-    border-radius: 2px;
-}
-
-/* ===== SECTION ===== */
-.section {
-    padding: 60px 0 80px;
-}
-
-.section-light {
-    background: #f8fafc;
-}
-
-.section-eyebrow {
-    display: inline-block;
-    font-size: 0.8rem;
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: #FF6B00;
-    background: rgba(255, 107, 0, 0.10);
-    padding: 6px 16px;
-    border-radius: 40px;
-    margin-bottom: 12px;
-}
-
-.section-title {
-    font-family: 'Poppins', sans-serif;
-    font-size: 2.6rem;
-    font-weight: 800;
-    color: #0b1a33;
-    line-height: 1.2;
-    margin-bottom: 12px;
-}
-
-.section-desc {
-    font-size: 1.1rem;
-    color: #475569;
-    max-width: 640px;
-    margin-bottom: 32px;
-}
-
-/* ===== FILTERS ===== */
-.filters {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 40px;
-}
-
-.filter-btn {
-    padding: 10px 28px;
-    border-radius: 50px;
-    border: 2px solid #e2e8f0;
-    background: transparent;
-    font-weight: 600;
-    font-size: 0.9rem;
-    color: #475569;
-    cursor: pointer;
-    transition: all 0.25s;
-}
-
-.filter-btn:hover {
-    border-color: #FF6B00;
-    color: #FF6B00;
-}
-
-.filter-btn.active {
-    background: #FF6B00;
-    border-color: #FF6B00;
-    color: #fff;
-    box-shadow: 0 6px 18px rgba(255, 107, 0, 0.25);
-}
-
-/* ===== PROJECTS GRID ===== */
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-    gap: 32px;
-}
-
-/* ===== PROJECT CARD ===== */
-.project-card {
-    background: #fff;
-    border-radius: 24px;
-    overflow: hidden;
-    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s, box-shadow 0.3s;
-    border: 1px solid rgba(0, 0, 0, 0.04);
-}
-
-.project-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.10);
-}
-
-/* ===== CAROUSEL ===== */
-.carousel {
-    position: relative;
-    width: 100%;
-    height: 240px;
-    overflow: hidden;
-    background: #eef2f6;
-    flex-shrink: 0;
-}
-
-.carousel-inner {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-.carousel-item {
-    min-width: 100%;
-    height: 100%;
-    flex-shrink: 0;
-}
-
-.carousel-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-/* Arrows */
-.carousel-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(4px);
-    border: none;
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
-    font-size: 1.5rem;
-    font-weight: 300;
-    color: #0b1a33;
-    cursor: pointer;
-    transition: all 0.2s;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 10;
-    line-height: 1;
-}
-
-.carousel-btn:hover {
-    background: #fff;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
-    transform: translateY(-50%) scale(1.06);
-}
-
-.carousel-btn.prev {
-    left: 10px;
-}
-
-.carousel-btn.next {
-    right: 10px;
-}
-
-/* Dots */
-.carousel-dots {
-    position: absolute;
-    bottom: 14px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 8px;
-    z-index: 10;
-    background: rgba(0, 0, 0, 0.25);
-    backdrop-filter: blur(4px);
-    padding: 6px 12px;
-    border-radius: 40px;
-}
-
-.carousel-dots .dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.5);
-    border: none;
-    cursor: pointer;
-    transition: all 0.25s;
-    padding: 0;
-}
-
-.carousel-dots .dot.active {
-    background: #fff;
-    transform: scale(1.25);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
-}
-
-.carousel-dots .dot:hover {
-    background: rgba(255, 255, 255, 0.85);
-}
-
-/* ===== CARD INFO ===== */
-.project-card .info {
-    padding: 20px 22px 24px;
-}
-
-.project-card .tag {
-    display: inline-block;
-    font-size: 0.7rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    color: #EA580C;
-    background: rgba(255, 107, 0, 0.10);
-    padding: 4px 14px;
-    border-radius: 30px;
-    margin-bottom: 8px;
-}
-
-.project-card .info h3 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: #b4a70f;
-    margin-bottom: 4px;
-}
-
-.project-card .info p {
-    font-size: 0.92rem;
-    color: #8b8764;
-    margin: 0;
-}
-
-/* ===== FOOTER ===== */
-footer {
-    background: #00040a;
-    color: rgba(255, 255, 255, 0.7);
-    padding: 48px 0 32px;
-    margin-top: 20px;
-    text-align: center;
-}
-
-footer h3 {
-    color: #fff;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    font-size: 1.3rem;
-    margin-bottom: 4px;
-}
-
-footer .socials {
-    display: flex;
-    gap: 18px;
-    margin: 12px 0 20px;
-    justify-content: center;
-}
-
-footer .socials a {
-    color: rgba(17, 0, 0, 0.6);
-    font-weight: 600;
-    transition: color 0.2s;
-    font-size: 0.95rem;
-}
-
-footer .socials a:hover {
-    color: #fff;
-}
-
-footer .bottom {
-    border-top: 1px solid rgb(0, 0, 0);
-    padding-top: 20px;
-    font-size: 0.85rem;
-    margin-top: 8px;
-}
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 920px) {
-    .nav-links {
-        gap: 18px;
-        font-size: 0.85rem;
-    }
-    .nav-auth .btn {
-        padding: 8px 16px;
-        font-size: 0.8rem;
-    }
-    .section-title {
-        font-size: 2rem;
-    }
-}
-
-@media (max-width: 760px) {
-    body {
-        padding-top: 82px;
-    }
-
-    .navbar .container {
-        flex-wrap: nowrap;
-    }
-
-    .nav-links {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: #fff;
-        flex-direction: column;
-        padding: 20px 24px 28px;
-        gap: 14px;
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
-        border-top: 1px solid #eef2f6;
-        border-radius: 0 0 20px 20px;
-    }
-
-    .nav-links.open {
-        display: flex;
-    }
-
-    .nav-auth {
-        display: none;
-    }
-
-    .burger {
-        display: flex;
-    }
-
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .carousel {
-        height: 200px;
-    }
-
-    .section-title {
-        font-size: 1.7rem;
-    }
-
-    .filters {
-        gap: 8px;
-    }
-
-    .filter-btn {
-        padding: 8px 18px;
-        font-size: 0.8rem;
-    }
-}
-
-@media (max-width: 440px) {
-    .carousel {
-        height: 170px;
-    }
-
-    .carousel-btn {
-        width: 30px;
-        height: 30px;
-        font-size: 1.1rem;
-    }
-
-    .project-card .info {
-        padding: 16px 18px 20px;
-    }
-}
+        /* ===== RESET & BASE ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f8fafc;
+            color: #0b1a33;
+            padding-top: 110px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        /* ===== PALETTE ORANGE ===== */
+        :root {
+            --orange-dark: #cc5500;
+            --orange-pure: #e86b1a;
+            --orange-light: #f5a05c;
+            --orange-bg: #fff0e6;
+            --orange-gradient: linear-gradient(135deg, #e86b1a, #cc5500);
+        }
+
+        /* ===== NAVBAR ===== */
+        .navbar {
+            position: fixed;
+            top: 16px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: calc(100% - 32px);
+            max-width: 1200px;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.55);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            border-radius: 50px;
+            box-shadow: 0 10px 40px rgba(255, 107, 0, 0.15);
+        }
+
+        .navbar .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 24px;
+            flex-wrap: nowrap;
+        }
+
+        .logo img {
+            height: 36px;
+            width: auto;
+            border-radius: 8px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        .nav-links a {
+            color: #1a1a1a;
+            transition: color 0.2s;
+            position: relative;
+            padding: 4px 0;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0%;
+            height: 2.5px;
+            background: var(--orange-pure);
+            transition: width 0.25s;
+            border-radius: 4px;
+        }
+
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%;
+        }
+
+        .nav-links a.active {
+            color: var(--orange-pure);
+            font-weight: 600;
+        }
+
+        .nav-auth {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .btn {
+            padding: 8px 20px;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            transition: all 0.25s;
+            border: none;
+            cursor: pointer;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1.5px solid var(--orange-pure);
+            color: var(--orange-pure);
+        }
+
+        .btn-outline:hover {
+            background: var(--orange-pure);
+            color: #fff;
+        }
+
+        .btn-primary {
+            background: var(--orange-gradient);
+            color: #fff;
+            box-shadow: 0 6px 20px rgba(255, 107, 0, 0.35);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 26px rgba(255, 107, 0, 0.45);
+        }
+
+        .burger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 6px;
+        }
+
+        .burger span {
+            width: 24px;
+            height: 2px;
+            background: #1a1a1a;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .burger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+        .burger.active span:nth-child(2) { opacity: 0; }
+        .burger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+        /* ===== SECTION ===== */
+        .section {
+            padding: 60px 0 80px;
+        }
+
+        .section-light {
+            background: #f8fafc;
+        }
+
+        .section-eyebrow {
+            display: inline-block;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--orange-pure);
+            background: rgba(255, 107, 0, 0.10);
+            padding: 6px 16px;
+            border-radius: 40px;
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.6rem;
+            font-weight: 800;
+            color: #0b1a33;
+            line-height: 1.2;
+            margin-bottom: 12px;
+        }
+
+        .section-desc {
+            font-size: 1.1rem;
+            color: #475569;
+            max-width: 640px;
+            margin-bottom: 32px;
+        }
+
+        /* ===== FILTERS ===== */
+        .filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 40px;
+        }
+
+        .filter-btn {
+            padding: 10px 28px;
+            border-radius: 50px;
+            border: 2px solid #e2e8f0;
+            background: transparent;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: #475569;
+            cursor: pointer;
+            transition: all 0.25s;
+            white-space: nowrap;
+        }
+
+        .filter-btn:hover {
+            border-color: var(--orange-pure);
+            color: var(--orange-pure);
+        }
+
+        .filter-btn.active {
+            background: var(--orange-pure);
+            border-color: var(--orange-pure);
+            color: #fff;
+            box-shadow: 0 6px 18px rgba(255, 107, 0, 0.25);
+        }
+
+        /* ===== PROJECTS GRID ===== */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 32px;
+        }
+
+        /* ===== PROJECT CARD ===== */
+        .project-card {
+            background: #fff;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid rgba(0, 0, 0, 0.04);
+        }
+
+        .project-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 48px rgba(0, 0, 0, 0.10);
+        }
+
+        /* ===== CAROUSEL ===== */
+        .carousel {
+            position: relative;
+            width: 100%;
+            height: 240px;
+            overflow: hidden;
+            background: #eef2f6;
+            flex-shrink: 0;
+            cursor: pointer;
+        }
+
+        .carousel-inner {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .carousel-item {
+            min-width: 100%;
+            height: 100%;
+            flex-shrink: 0;
+        }
+
+        .carousel-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(4px);
+            border: none;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            font-weight: 300;
+            color: #0b1a33;
+            cursor: pointer;
+            transition: all 0.2s;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+            line-height: 1;
+        }
+
+        .carousel-btn:hover {
+            background: #fff;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
+            transform: translateY(-50%) scale(1.06);
+        }
+
+        .carousel-btn.prev { left: 10px; }
+        .carousel-btn.next { right: 10px; }
+
+        .carousel-dots {
+            position: absolute;
+            bottom: 14px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 8px;
+            z-index: 10;
+            background: rgba(0, 0, 0, 0.25);
+            backdrop-filter: blur(4px);
+            padding: 6px 12px;
+            border-radius: 40px;
+        }
+
+        .carousel-dots .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            border: none;
+            cursor: pointer;
+            transition: all 0.25s;
+            padding: 0;
+        }
+
+        .carousel-dots .dot.active {
+            background: #fff;
+            transform: scale(1.25);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+        }
+
+        .carousel-dots .dot:hover {
+            background: rgba(255, 255, 255, 0.85);
+        }
+
+        /* ===== CARD INFO ===== */
+        .project-card .info {
+            padding: 20px 22px 24px;
+        }
+
+        .project-card .tag {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--orange-pure);
+            background: rgba(255, 107, 0, 0.10);
+            padding: 4px 14px;
+            border-radius: 30px;
+            margin-bottom: 8px;
+        }
+
+        .project-card .info h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #0b1a33;
+            margin-bottom: 4px;
+        }
+
+        .project-card .info p {
+            font-size: 0.92rem;
+            color: #475569;
+            margin: 0;
+        }
+
+        /* ===== POURQUOI ME CHOISIR ===== */
+        .why-me {
+            background: var(--orange-bg);
+            border-radius: 32px;
+            padding: 50px 40px;
+            margin: 40px 0 60px;
+            border: 1px solid rgba(232, 107, 26, 0.15);
+        }
+
+        .why-me .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+            margin-top: 24px;
+        }
+
+        .why-me .card {
+            background: #fff;
+            padding: 28px 24px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+            transition: 0.3s;
+            border: 1px solid rgba(232, 107, 26, 0.08);
+        }
+
+        .why-me .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(232, 107, 26, 0.12);
+        }
+
+        .why-me .card .icon {
+            font-size: 2.4rem;
+            color: var(--orange-pure);
+            margin-bottom: 12px;
+        }
+
+        .why-me .card h4 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .why-me .card p {
+            font-size: 0.92rem;
+            color: #475569;
+            margin: 0;
+        }
+
+        /* ===== MODALE ===== */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.92);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+            cursor: pointer;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal img {
+            max-width: 90%;
+            max-height: 85vh;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            object-fit: contain;
+        }
+
+        .modal .close-modal {
+            position: absolute;
+            top: 30px;
+            right: 40px;
+            font-size: 3rem;
+            color: #fff;
+            cursor: pointer;
+            transition: 0.2s;
+            background: none;
+            border: none;
+        }
+
+        .modal .close-modal:hover { transform: rotate(90deg); }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: #00040a;
+            color: rgba(255, 255, 255, 0.7);
+            padding: 48px 0 32px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        footer h3 {
+            color: #fff;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 1.3rem;
+            margin-bottom: 4px;
+        }
+
+        footer .socials {
+            display: flex;
+            gap: 18px;
+            margin: 12px 0 20px;
+            justify-content: center;
+        }
+
+        footer .socials a {
+            font-size: 1.6rem;
+            transition: 0.2s;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        footer .socials a:hover {
+            color: var(--orange-pure);
+            transform: scale(1.1);
+        }
+
+        footer .bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 20px;
+            font-size: 0.85rem;
+            margin-top: 8px;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .projects-grid {
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+                gap: 24px;
+            }
+        }
+
+        @media (max-width: 920px) {
+            .nav-links {
+                gap: 18px;
+                font-size: 0.85rem;
+            }
+            .nav-auth .btn {
+                padding: 8px 16px;
+                font-size: 0.8rem;
+            }
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 760px) {
+            body {
+                padding-top: 82px;
+            }
+
+            .navbar .container {
+                flex-wrap: nowrap;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: rgba(255, 255, 255, 0.95);
+                backdrop-filter: blur(16px);
+                flex-direction: column;
+                padding: 20px 24px 28px;
+                gap: 14px;
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+                border-top: 1px solid #eef2f6;
+                border-radius: 0 0 20px 20px;
+            }
+
+            .nav-links.open {
+                display: flex;
+            }
+
+            .nav-auth {
+                display: none;
+            }
+
+            .burger {
+                display: flex;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .carousel {
+                height: 200px;
+            }
+
+            .section-title {
+                font-size: 1.7rem;
+            }
+
+            .filters {
+                gap: 8px;
+                overflow-x: auto;
+                flex-wrap: nowrap;
+                padding-bottom: 8px;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none;
+            }
+
+            .filters::-webkit-scrollbar {
+                display: none;
+            }
+
+            .filter-btn {
+                padding: 8px 18px;
+                font-size: 0.8rem;
+                flex-shrink: 0;
+            }
+
+            .why-me {
+                padding: 30px 20px;
+            }
+
+            .why-me .grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 440px) {
+            .navbar {
+                width: calc(100% - 16px);
+                top: 8px;
+                border-radius: 24px;
+            }
+
+            .navbar .container {
+                padding: 8px 16px;
+            }
+
+            .logo img {
+                height: 28px;
+            }
+
+            .carousel {
+                height: 170px;
+            }
+
+            .carousel-btn {
+                width: 30px;
+                height: 30px;
+                font-size: 1.1rem;
+            }
+
+            .project-card .info {
+                padding: 16px 18px 20px;
+            }
+
+            .section {
+                padding: 40px 0 60px;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+
+            .section-desc {
+                font-size: 1rem;
+            }
+
+            .why-me .grid {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 <body>
@@ -544,14 +778,14 @@ footer .bottom {
                 <a href="index.html">Accueil</a>
                 <a href="projects.html" class="active">Projets</a>
                 <a href="testimonials.html">Services</a>
-                <a href="about.html">A propos</a>
-                <a href="contact.html">Contacte</a>
+                <a href="about.html">À propos</a>
+                <a href="contact.html">Contact</a>
             </nav>
             <div class="nav-auth">
                 <a href="login.html" class="btn btn-outline">Connexion</a>
                 <a href="signup.html" class="btn btn-primary">Inscription</a>
             </div>
-            <button class="burger" id="burgerBtn" aria-label="Menu">
+            <button class="burger" id="burgerBtn" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">
                 <span></span><span></span><span></span>
             </button>
         </div>
@@ -560,41 +794,64 @@ footer .bottom {
     <!-- ===== PROJECTS SECTION ===== -->
     <section class="section section-light" style="padding-top:40px;">
         <div class="container">
-            <span class="section-eyebrow">Portfolio</span>
+            <span class="section-eyebrow"><i class="fas fa-folder-open" style="margin-right:6px;"></i> Portfolio</span>
             <h2 class="section-title">Tous mes projets</h2>
-            <p class="section-desc">Explorez l'ensemble de mes réalisations en branding, logo design, identité visuelle et développement blockchain.</p>
+            <p class="section-desc">Explorez l'ensemble de mes réalisations en branding, logo design, identité visuelle et développement web.</p>
 
             <!-- Filters -->
             <div class="filters">
                 <button class="filter-btn active" data-filter="all">Tous</button>
-                <button class="filter-btn" data-filter="branding">Branding Logo</button>
-                <button class="filter-btn" data-filter="logo">Flyer design</button>
-                <button class="filter-btn" data-filter="identite">Flux Structure de Projet</button>
-                <button class="filter-btn" data-filter="dev">Programmation et Développement </button>
+                <button class="filter-btn" data-filter="branding">Branding & Logo</button>
+                <button class="filter-btn" data-filter="logo">Structure & Flux</button>
+                <button class="filter-btn" data-filter="identite">Flyer Design</button>
+                <button class="filter-btn" data-filter="dev">Programmation & IA</button>
             </div>
 
             <!-- Grid -->
             <div class="projects-grid" id="projectsGrid">
 
-                <!-- 1. Neekle Branding - Branding -->
+                <!-- 1. Neekle Branding -->
                 <div class="project-card" data-category="branding">
                     <div class="carousel" data-carousel>
                         <div class="carousel-inner">
-                            <div class="carousel-item active"><img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1785174901/CSD_gldifv.jpg="Neekle 1" /></div>
-                            <div class="carousel-item"><img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1785174902/Exact_3D_logo__C_DIEU___black_202606301421_vhxnyn.jpg" alt="Neekle 2" /></div>
-                            <div class="carousel-item"><img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1785027990/Architecture_Backend___Microservices_Map._202606040138_1_mhely1.jpg" /></div>
-                         <div class="carousel-item active"><img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1785034070/Galerie_de_Portfolios_IA___202606032006_q6kwss.jpg" alt="Neekle 1" /></div>
-                            <div class="carousel-item"><img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1785034072/Galerie_Portfolios___API_Fetch_202606040127_jlwdre.jpg" alt="Neekle 2" /></div>
-                            <div class="carousel-item"><img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1785027990/Architecture_Backend___Microservices_Map._202606040138_1_mhely1.jpg" /></div>
+                            <div class="carousel-item active">
+                                <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1785174901/CSD_gldifv.jpg" alt="Neekle Structure - Image 1" />
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1785174902/Exact_3D_logo__C_DIEU___black_202606301421_vhxnyn.jpg" alt="Neekle Structure - Image 2" />
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1785027990/Architecture_Backend___Microservices_Map._202606040138_1_mhely1.jpg" alt="Neekle Structure - Image 3" />
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1785034070/Galerie_de_Portfolios_IA___202606032006_q6kwss.jpg" alt="Neekle Structure - Image 4" />
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1785034072/Galerie_Portfolios___API_Fetch_202606040127_jlwdre.jpg" alt="Neekle Structure - Image 5" />
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1785535284/Nouveau%20dossier%20%282%29/kenekel_s3mye6.webp" alt="Neekle Structure - Image 6" />
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1785174904/A_mosaic-style_motif_where_small_202606290446_dstzis.jpg" alt="Neekle Structure - Image 7" />
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1785535069/Nouveau%20dossier%20%282%29/cdiere_btzmmk.webp" alt="Neekle Structure - Image 8" />
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1785534974/Nouveau%20dossier%20%282%29/cdie_txqmfa.webp" alt="Neekle Structure - Image 9" />
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1785534899/Nouveau%20dossier%20%282%29/ABOUT_ME_copie_p3rwqw.webp" alt="Neekle Structure - Image 10" />
+                            </div>
                         </div>
-                        </div>
-                        <button class="carousel-btn prev" data-prev></button>
-                        <button class="carousel-btn next" data-next></button>
+                        <button class="carousel-btn prev" data-prev aria-label="Image précédente">&#10094;</button>
+                        <button class="carousel-btn next" data-next aria-label="Image suivante">&#10095;</button>
                         <div class="carousel-dots" data-dots></div>
                     </div>
                     <div class="info">
                         <span class="tag">Branding</span>
-                        <h3>Neekle Structure</h3>
+                        <h3>Neekle Structure et C'DIEU</h3>
                         <p>Création complète de l'identité visuelle, structure et du logo pour une marque de mode émergente.</p>
                     </div>
                 </div>
@@ -603,23 +860,33 @@ footer .bottom {
                 <div class="project-card" data-category="logo">
                     <div class="carousel" data-carousel>
                         <div class="carousel-inner">
-                            <div class="carousel-item active"><img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1785535435/Nouveau%20dossier%20%282%29/roie_myudzc.webp" alt="Findle 1" /></div>
-                            <div class="carousel-item"><img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1785534925/Nouveau%20dossier%20%282%29/fatisco_hgfoy4.webp" alt="flyer fatisco" /></div>
-                            <div class="carousel-item"><img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1785535009/Nouveau%20dossier%20%282%29/DAME_DE_JESUS_vgou12.webp" alt="Findle 2" /></div>
-                            <div class="carousel-item"><img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1785534920/Nouveau%20dossier%20%282%29/flyer_nxudrf.webp" alt="Findle 3" /></div>
-                            <div class="carousel-item active"><img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1785535435/Nouveau%20dossier%20%282%29/roie_myudzc.webp" alt="Findle 1" /></div>
-                            <div class="carousel-item"><img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1785534925/Nouveau%20dossier%20%282%29/fatisco_hgfoy4.webp" alt="flyer fatisco" /></div>
-                            <div class="carousel-item"><img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1785176017/620_rvbf6f.jpg" alt="Findle 2" /></div>
-                            <div class="carousel-item"><img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1785077644/222_qusykl.png" alt="Findle 3" /></div>
+                            <div class="carousel-item active">
+                                <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1785167371/West_African_male_motorcycle_delivery_202606090043_i8sznr.jpg" alt="Plateforme Transit - Image 1" />
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1785167042/Logo_J_Vais_Aussi_visible_en_202606061715_1_yrpm8q.jpg" alt="Plateforme Transit - Flyer Fatisco" />
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1785535330/Nouveau%20dossier%20%282%29/opqqs_dyt7se.webp" alt="Plateforme Transit - Image 3" />
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1785167296/Logo_J_Vais_Aussi_en_haut__202606061713_3_mdpt9f.jpg" alt="Plateforme Transit - Flyer" />
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1785535120/Nouveau%20dossier%20%282%29/jsvecd_tv9goz.webp" alt="Plateforme Transit - Image 5" />
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1785535094/Nouveau%20dossier%20%282%29/jsizz_qijx6s.webp" alt="Plateforme Transit - Image 6" />
+                            </div>
                         </div>
-                        <button class="carousel-btn prev" data-prev></button>
-                        <button class="carousel-btn next" data-next></button>
+                        <button class="carousel-btn prev" data-prev aria-label="Image précédente">&#10094;</button>
+                        <button class="carousel-btn next" data-next aria-label="Image suivante">&#10095;</button>
                         <div class="carousel-dots" data-dots></div>
                     </div>
                     <div class="info">
                         <span class="tag">Logo Design</span>
-                        <h3>Emersion d'une plateforme de Transit</h3>
-                        <p>Design de logo moderne,structure et flux de construction en 3d et minimaliste pour une plateforme tech.</p>
+                        <h3>Émersion d'une plateforme de Transit</h3>
+                        <p>Design de logo moderne, structure et flux de construction en 3D et minimaliste pour une plateforme tech.</p>
                     </div>
                 </div>
 
@@ -627,22 +894,38 @@ footer .bottom {
                 <div class="project-card" data-category="identite">
                     <div class="carousel" data-carousel>
                         <div class="carousel-inner">
-                            <div class="carousel-item active"><img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1785077278/que_le_text_soit_en_202605261426_bz5jrz.jpg" alt="Neetale 1" /></div>
-                            <div class="carousel-item"><img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1785077314/le_texte_en_francais_et_202605190155_uv9gco.jpg" alt="Neetale 2" /></div>
-                            <div class="carousel-item"><img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1785035925/222_gm31ik.png" alt="flyer de marcel art matchi"/> </div>
-                            <div class="carousel-item"><img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1785077200/GOOO_qau6gc.jpg" alt="Neetale 3" /></div>
-                            <div class="carousel-item"><img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1785077200/GOOO_qau6gc.jpg" alt="Neetale 3" /></div>
-                            <div class="carousel-item"><img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1785175581/DAME_DE_JESUS_oo5za5.webp" alt="Neetale 3" /></div>
-                            <div class="carousel-item"><img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1785176024/pom_hyvvoj.jpg" alt="Neetale 3" /></div>
-                            <div class="carousel-item"><img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1785077358/JJO_atuptq.jpg" alt="Neetale 3" /></div>
+                            <div class="carousel-item active">
+                                <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1785077278/que_le_text_soit_en_202605261426_bz5jrz.jpg" alt="Neetale - Image 1" />
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1785077314/le_texte_en_francais_et_202605190155_uv9gco.jpg" alt="Neetale - Image 2" />
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1785035925/222_gm31ik.png" alt="Neetale - Flyer Marcel Art Matchi" />
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1785077200/GOOO_qau6gc.jpg" alt="Neetale - Image 4" />
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1785175581/DAME_DE_JESUS_oo5za5.webp" alt="Neetale - Image 5" />
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1785176024/pom_hyvvoj.jpg" alt="Neetale - Image 6" />
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1785535435/Nouveau%20dossier%20%282%29/roie_myudzc.webp" alt="Neetale - Image 7" />
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1785537441/reace_okqekp.webp" alt="Neetale - Image 8" />
+                            </div>
                         </div>
-                        <button class="carousel-btn prev" data-prev></button>
-                        <button class="carousel-btn next" data-next></button>
+                        <button class="carousel-btn prev" data-prev aria-label="Image précédente">&#10094;</button>
+                        <button class="carousel-btn next" data-next aria-label="Image suivante">&#10095;</button>
                         <div class="carousel-dots" data-dots></div>
                     </div>
                     <div class="info">
                         <span class="tag">Identité visuelle</span>
-                        <h3>Neetale</h3>
+                        <h3>Flyer Design Support</h3>
                         <p>Refonte complète de la charte graphique et des supports de communication.</p>
                     </div>
                 </div>
@@ -651,48 +934,94 @@ footer .bottom {
                 <div class="project-card" data-category="branding">
                     <div class="carousel" data-carousel>
                         <div class="carousel-inner">
-                            <div class="carousel-item active"><img src="https://picsum.photos/seed/swift1/600/400" alt="Swift 1" /></div>
-                            <div class="carousel-item"><img src="https://picsum.photos/seed/swift2/600/400" alt="Swift 2" /></div>
-                            <div class="carousel-item"><img src="https://picsum.photos/seed/swift3/600/400" alt="Swift 3" /></div>
+                            <div class="carousel-item active">
+                                <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1785535220/Nouveau%20dossier%20%282%29/marcmtc_qvaql7.webp" alt="SwiftLogic - Image 1" />
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1785535260/Nouveau%20dossier%20%282%29/moaet_c8vr6u.webp" alt="SwiftLogic - Image 2" />
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1785535189/Nouveau%20dossier%20%282%29/marcel_w0axwz.webp" alt="SwiftLogic - Image 3" />
+                            </div>
                         </div>
-                        <button class="carousel-btn prev" data-prev></button>
-                        <button class="carousel-btn next" data-next></button>
+                        <button class="carousel-btn prev" data-prev aria-label="Image précédente">&#10094;</button>
+                        <button class="carousel-btn next" data-next aria-label="Image suivante">&#10095;</button>
                         <div class="carousel-dots" data-dots></div>
                     </div>
                     <div class="info">
-                        <span class="tag">Branding</span>
-                        <h3>SwiftLogic</h3>
-                        <p>Stratégie de marque et déclinaisons visuelles pour une startup logistique.</p>
+                        <span class="tag">ImgShoot</span>
+                        <h3>Img Prompting</h3>
+                        <p>Prompting Photo Générative de haute performance sur de l'image ISO IA2026.</p>
                     </div>
                 </div>
 
-
             </div><!-- /projects-grid -->
+
+            <!-- ===== POURQUOI ME CHOISIR ===== -->
+            <div class="why-me">
+                <span class="section-eyebrow" style="background:rgba(255,255,255,0.8);">
+                    <i class="fas fa-star" style="margin-right:6px;"></i> Pourquoi me choisir ?
+                </span>
+                <h2 class="section-title" style="font-size:2.2rem;">Un choix de qualité et de vision</h2>
+                <p style="color:#475569; font-size:1.05rem; max-width:700px;">
+                    Choisir Ezechiel Tchokponhoue, c'est faire le choix d'une <strong>énergie garantie</strong> et d'une 
+                    <strong>vision stratégique</strong>. Je ne me contente pas de créer du design ou du code : 
+                    je <strong>résous vos problèmes</strong> en profondeur, là où d'autres n'ont pas su apporter de solutions.
+                </p>
+                <div class="grid">
+                    <div class="card">
+                        <div class="icon"><i class="fas fa-bolt"></i></div>
+                        <h4>Énergie & Dynamisme</h4>
+                        <p>Je m'investis à 200% dans chaque projet avec une énergie contagieuse et une détermination sans faille.</p>
+                    </div>
+                    <div class="card">
+                        <div class="icon"><i class="fas fa-eye"></i></div>
+                        <h4>Vision Stratégique</h4>
+                        <p>Je ne crée pas seulement du design : je construis une vision à long terme pour votre marque ou votre produit.</p>
+                    </div>
+                    <div class="card">
+                        <div class="icon"><i class="fas fa-check-circle"></i></div>
+                        <h4>Qualité Garantie</h4>
+                        <p>Chaque livrable est pensé avec soin, testé et optimisé pour vous offrir une expérience irréprochable.</p>
+                    </div>
+                    <div class="card">
+                        <div class="icon"><i class="fas fa-lightbulb"></i></div>
+                        <h4>Solutions Concrètes</h4>
+                        <p>J'identifie vos problèmes et je déploie des solutions sur mesure, adaptées à votre réalité et vos ambitions.</p>
+                    </div>
+                </div>
+            </div>
+
         </div><!-- /container -->
     </section>
 
-    <!-- ===== FOOTER ===== -->
-   <footer>
-  <div class="container">
-    <h3 style="color:#fff;">Tchokponhoue Ezechiel</h3>
-<div class="socials">
-  <a href="#" aria-label="Instagram" target="_blank" rel="noopener noreferrer" style="color: #E4405F;">
-    <i class="fab fa-instagram"></i>
-  </a>
-  <a href="#" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" style="color: #0A66C2;">
-    <i class="fab fa-linkedin-in"></i>
-  </a>
-  <a href="#" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer" style="color: #25D366;">
-    <i class="fab fa-whatsapp"></i>
-  </a>
-  <a href="#" aria-label="TikTok" target="_blank" rel="noopener noreferrer" style="color: #FE2C55;">
-    <i class="fab fa-tiktok"></i>
-  </a>
-</div>
-    <div class="bottom">© 2026 Tchokponhoue Ezechiel. Tous droits réservés.</div>
-  </div>
-</footer>
+    <!-- ===== MODALE ===== -->
+    <div class="modal" id="imageModal">
+        <button class="close-modal" id="closeModal">&times;</button>
+        <img id="modalImage" src="" alt="Agrandissement">
+    </div>
 
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="container">
+            <h3>Tchokponhoue Ezechiel</h3>
+            <div class="socials">
+                <a href="https://www.instagram.com/ezechielwhalesg" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/ez%C3%A9chiel-tchokponhoue-5a6766263" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://wa.me/message/AAXNLW3VI47VI1" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="https://www.tiktok.com/@ezechielwhalesg" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+            </div>
+            <div class="bottom">&copy; 2026 Tchokponhoue Ezechiel. Tous droits réservés.</div>
+        </div>
+    </footer>
 
     <!-- ===== JAVASCRIPT ===== -->
     <script>
@@ -704,11 +1033,15 @@ footer .bottom {
             const navLinks = document.getElementById('navLinks');
             if (burger && navLinks) {
                 burger.addEventListener('click', function() {
-                    navLinks.classList.toggle('open');
+                    const isOpen = navLinks.classList.toggle('open');
+                    burger.classList.toggle('active');
+                    burger.setAttribute('aria-expanded', isOpen);
                 });
                 document.addEventListener('click', function(e) {
                     if (!navLinks.contains(e.target) && !burger.contains(e.target)) {
                         navLinks.classList.remove('open');
+                        burger.classList.remove('active');
+                        burger.setAttribute('aria-expanded', 'false');
                     }
                 });
             }
@@ -726,6 +1059,13 @@ footer .bottom {
                     cards.forEach(function(card) {
                         if (filter === 'all' || card.dataset.category === filter) {
                             card.style.display = 'block';
+                            card.style.opacity = '0';
+                            card.style.transform = 'translateY(20px)';
+                            requestAnimationFrame(function() {
+                                card.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+                                card.style.opacity = '1';
+                                card.style.transform = 'translateY(0)';
+                            });
                         } else {
                             card.style.display = 'none';
                         }
@@ -745,7 +1085,6 @@ footer .bottom {
                     const dotsContainer = container.querySelector('[data-dots]');
 
                     if (!inner || items.length < 2) {
-                        // Hide arrows & dots if not enough items
                         if (prevBtn) prevBtn.style.display = 'none';
                         if (nextBtn) nextBtn.style.display = 'none';
                         if (dotsContainer) dotsContainer.style.display = 'none';
@@ -755,7 +1094,6 @@ footer .bottom {
                     let current = 0;
                     const total = items.length;
 
-                    // Build dots
                     if (dotsContainer) {
                         dotsContainer.innerHTML = '';
                         for (let i = 0; i < total; i++) {
@@ -776,13 +1114,11 @@ footer .bottom {
                         current = index;
                         inner.style.transform = 'translateX(-' + (current * 100) + '%)';
 
-                        // Update dots
                         dots.forEach(function(d, i) {
                             d.classList.toggle('active', i === current);
                         });
                     }
 
-                    // Events
                     if (prevBtn) {
                         prevBtn.addEventListener('click', function(e) {
                             e.stopPropagation();
@@ -804,18 +1140,22 @@ footer .bottom {
                         });
                     });
 
-                    // Touch / swipe support
+                    // Cliquer sur l'image l'agrandit en modale
+                    const images = container.querySelectorAll('.carousel-item img');
+                    images.forEach(function(img) {
+                        img.addEventListener('click', function(e) {
+                            e.stopPropagation();
+                            openModal(this.src);
+                        });
+                    });
+
+                    // Touch / swipe
                     let startX = 0;
                     let isDragging = false;
 
                     container.addEventListener('touchstart', function(e) {
                         startX = e.changedTouches[0].screenX;
                         isDragging = true;
-                    }, { passive: true });
-
-                    container.addEventListener('touchmove', function(e) {
-                        if (!isDragging) return;
-                        // optional: add a subtle visual feedback
                     }, { passive: true });
 
                     container.addEventListener('touchend', function(e) {
@@ -829,7 +1169,7 @@ footer .bottom {
                         }
                     }, { passive: true });
 
-                    // Auto-play (gentle) — but stop on user interaction
+                    // Auto-play
                     let autoplay = null;
 
                     function startAutoplay() {
@@ -846,32 +1186,50 @@ footer .bottom {
                         }
                     }
 
-                    // Pause on hover / touch
                     container.addEventListener('mouseenter', stopAutoplay);
                     container.addEventListener('mouseleave', startAutoplay);
                     container.addEventListener('touchstart', stopAutoplay, { passive: true });
                     container.addEventListener('touchend', startAutoplay, { passive: true });
 
-                    // Start autoplay
                     startAutoplay();
-
-                    // Store cleanup on the container
-                    container._cleanupAutoplay = function() {
-                        stopAutoplay();
-                        container.removeEventListener('mouseenter', stopAutoplay);
-                        container.removeEventListener('mouseleave', startAutoplay);
-                        container.removeEventListener('touchstart', stopAutoplay);
-                        container.removeEventListener('touchend', startAutoplay);
-                    };
                 });
             }
+
+            // ---- MODALE ----
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            const closeModal = document.getElementById('closeModal');
+
+            function openModal(src) {
+                modal.classList.add('active');
+                modalImg.src = src;
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeModalFn() {
+                modal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+                modalImg.src = '';
+            }
+
+            if (closeModal) {
+                closeModal.addEventListener('click', closeModalFn);
+            }
+            if (modal) {
+                modal.addEventListener('click', function(e) {
+                    if (e.target === this) closeModalFn();
+                });
+            }
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') closeModalFn();
+            });
 
             // ---- INIT ----
             initCarousels();
 
-            console.log('✅ Projets avec carrousels chargés !');
+            console.log('Projets avec carrousels et modale chargés !');
         })();
     </script>
-
+<script src="app.js"></script>
 </body>
 </html>
