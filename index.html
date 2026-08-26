@@ -188,6 +188,9 @@
       background: #faf9f8;
       color: #1e1e1e;
       line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
     .container {
       max-width: 1200px;
@@ -204,32 +207,53 @@
       --orange-light: #f5a05c;
       --orange-bg: #fff0e6;
       --orange-gradient: linear-gradient(135deg, #e86b1a, #cc5500);
+      --shadow-sm: 0 4px 12px rgba(0,0,0,0.05);
+      --shadow-md: 0 8px 24px rgba(0,0,0,0.08);
+      --shadow-lg: 0 20px 60px rgba(204, 85, 0, 0.15);
+      --radius: 20px;
     }
 
     /* ===== BOUTONS ===== */
     .btn {
       display: inline-block;
-      padding: 12px 30px;
+      padding: 14px 32px;
       border-radius: 50px;
       font-weight: 600;
-      font-size: 0.95rem;
-      transition: 0.3s ease;
+      font-size: 1rem;
+      transition: all 0.3s ease;
       border: 2px solid transparent;
       cursor: pointer;
       text-align: center;
+      letter-spacing: 0.3px;
     }
     .btn-primary {
       background: var(--orange-gradient);
       color: #fff;
       border-color: var(--orange-pure);
+      box-shadow: 0 6px 18px rgba(232, 107, 26, 0.3);
     }
-    .btn-primary:hover { background: var(--orange-dark); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(232, 107, 26, 0.3); }
+    .btn-primary:hover {
+      background: var(--orange-dark);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 28px rgba(232, 107, 26, 0.4);
+    }
+    .btn-outline {
+      background: transparent;
+      color: var(--orange-pure);
+      border-color: var(--orange-pure);
+    }
+    .btn-outline:hover {
+      background: var(--orange-pure);
+      color: #fff;
+      transform: translateY(-3px);
+    }
 
     /* ===== NAVBAR ===== */
     .navbar {
-      background: #fff;
-      padding: 14px 0;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      padding: 16px 0;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.04);
       position: sticky;
       top: 0;
       z-index: 100;
@@ -243,15 +267,33 @@
     .logo img {
       height: 45px;
       width: auto;
+      transition: transform 0.3s;
     }
+    .logo:hover img { transform: scale(1.05); }
     .nav-links {
       display: flex;
       gap: 28px;
       font-weight: 500;
+      align-items: center;
     }
     .nav-links a {
       color: #1e1e1e;
       transition: 0.2s;
+      position: relative;
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--orange-pure);
+      transition: width 0.3s;
+    }
+    .nav-links a:hover::after,
+    .nav-links a.active::after {
+      width: 100%;
     }
     .nav-links a:hover,
     .nav-links a.active { color: var(--orange-pure); }
@@ -268,40 +310,58 @@
       height: 3px;
       background: #1e1e1e;
       border-radius: 4px;
+      transition: 0.3s;
     }
+    .burger:hover span { background: var(--orange-pure); }
 
     /* ===== HERO ===== */
     .hero {
       background: var(--orange-bg);
-      min-height: 80vh;
+      min-height: 85vh;
       display: flex;
       align-items: center;
-      padding: 40px 0;
+      padding: 60px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 600px;
+      height: 600px;
+      background: rgba(232, 107, 26, 0.08);
+      border-radius: 50%;
     }
     .hero .container {
       display: flex;
       align-items: center;
+      justify-content: space-between;
       gap: 50px;
       flex-wrap: wrap;
+      position: relative;
+      z-index: 1;
     }
     .hero-content {
       flex: 1 1 400px;
+      text-align: center;
     }
     .hero-content .badge {
       display: inline-block;
       background: var(--orange-pure);
       color: #fff;
-      font-size: 0.75rem;
+      font-size: 0.8rem;
       font-weight: 600;
-      padding: 4px 16px;
+      padding: 6px 20px;
       border-radius: 30px;
       letter-spacing: 1px;
       text-transform: uppercase;
-      margin-bottom: 12px;
+      margin-bottom: 16px;
     }
     .hero-content h1 {
       font-family: 'Poppins', sans-serif;
-      font-size: 3.5rem;
+      font-size: clamp(2.5rem, 5vw, 4rem);
       font-weight: 900;
       line-height: 1.1;
       color: #1e1e1e;
@@ -313,96 +373,108 @@
       font-size: 1.3rem;
       font-weight: 500;
       color: #444;
-      margin: 10px 0 16px;
+      margin: 16px 0 24px;
     }
     .hero-content .surnoms {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
-      margin: 16px 0 24px;
+      gap: 12px;
+      margin: 20px 0 30px;
       justify-content: center;
     }
     .hero-content .surnoms span {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
+      gap: 8px;
       background: #fff;
-      padding: 6px 18px;
+      padding: 8px 20px;
       border-radius: 30px;
       font-weight: 600;
       font-size: 0.9rem;
       color: var(--orange-pure);
       border: 1px solid var(--orange-light);
       box-shadow: 0 2px 8px rgba(232, 107, 26, 0.08);
+      transition: transform 0.2s;
+    }
+    .hero-content .surnoms span:hover {
+      transform: translateY(-3px);
+    }
+    .cta-buttons {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      justify-content: center;
     }
     .hero-image {
       flex: 1 1 400px;
-      border-radius: 24px;
+      border-radius: var(--radius);
       overflow: hidden;
-      box-shadow: 0 20px 60px rgba(204, 85, 0, 0.2);
+      box-shadow: var(--shadow-lg);
+      max-width: 500px;
+      margin: 0 auto;
     }
     .hero-image img {
       width: 100%;
       height: auto;
       object-fit: cover;
-      display: block;
+      transition: transform 0.5s;
+    }
+    .hero-image:hover img {
+      transform: scale(1.03);
     }
 
     /* ===== CARROUSEL SIMPLE ===== */
     .carousel-section {
-      padding: 70px 0;
+      padding: 80px 0;
       background: #fff;
-      overflow: hidden;
+      text-align: center;
     }
     .carousel-section .section-title {
       font-family: 'Poppins', sans-serif;
-      font-size: 2.2rem;
+      font-size: 2.5rem;
       font-weight: 700;
       color: #1e1e1e;
-      text-align: center;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
     .carousel-section .section-desc {
-      text-align: center;
       color: #666;
       margin-bottom: 40px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
-    .carousel-3d {
+    .carousel-wrapper {
       position: relative;
       width: 100%;
-      max-width: 800px;
+      max-width: 700px;
       margin: 0 auto;
-      height: 450px;
       overflow: hidden;
-      border-radius: 20px;
-      box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-md);
     }
-
-    .carousel-3d .carousel-track {
+    .carousel-track {
       display: flex;
-      height: 100%;
-      transition: transform 0.5s ease-in-out;
+      transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      height: 400px;
     }
-
-    .carousel-3d .carousel-slide {
+    .carousel-slide {
       flex: 0 0 100%;
       height: 100%;
-      overflow: hidden;
       position: relative;
       cursor: pointer;
     }
-    .carousel-3d .carousel-slide img {
+    .carousel-slide img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
-    .carousel-3d .carousel-slide .slide-label {
+    .carousel-slide .slide-label {
       position: absolute;
       bottom: 0;
       left: 0;
       right: 0;
-      padding: 12px;
+      padding: 16px;
       background: linear-gradient(transparent, rgba(0,0,0,0.7));
       color: #fff;
       font-weight: 600;
@@ -411,7 +483,7 @@
       opacity: 0;
       transition: opacity 0.3s;
     }
-    .carousel-3d .carousel-slide:hover .slide-label {
+    .carousel-slide:hover .slide-label {
       opacity: 1;
     }
 
@@ -428,9 +500,9 @@
       width: 50px;
       height: 50px;
       border-radius: 50%;
-      font-size: 1.4rem;
+      font-size: 1.3rem;
       cursor: pointer;
-      transition: 0.3s;
+      transition: all 0.3s;
       box-shadow: 0 4px 16px rgba(232, 107, 26, 0.25);
     }
     .carousel-controls button:hover {
@@ -441,7 +513,7 @@
     .carousel-indicators {
       display: flex;
       justify-content: center;
-      gap: 10px;
+      gap: 12px;
       margin-top: 20px;
     }
     .carousel-indicators .dot {
@@ -451,7 +523,7 @@
       background: #ddd;
       border: none;
       cursor: pointer;
-      transition: 0.3s;
+      transition: all 0.3s;
     }
     .carousel-indicators .dot.active {
       background: var(--orange-pure);
@@ -460,18 +532,21 @@
 
     /* ===== BANNIÈRE NARROQ ===== */
     .narroq-banner {
-      background: #fff0e6;
-      border-radius: 24px;
-      padding: 40px 30px;
-      color: #1e1e1e;
+      background: #fff;
+      border-radius: var(--radius);
+      padding: 40px;
       display: flex;
       align-items: center;
+      justify-content: center;
       gap: 30px;
       flex-wrap: wrap;
-      margin: 20px 0;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+      margin: 20px auto;
+      max-width: 900px;
     }
     .narroq-track {
-      flex: 0 0 100px;
+      width: 100px;
       height: 70px;
       background: url('https://res.cloudinary.com/nyke7lhc/image/upload/v1785027102/image_0_bm09fx.png') center/contain no-repeat;
     }
@@ -485,65 +560,77 @@
     }
 
     /* ===== PROJETS ===== */
-    .section { padding: 60px 0; }
+    .section { padding: 80px 0; }
     .section-light { background: #fff; }
     .section-tint { background: var(--orange-bg); }
     .section-eyebrow {
       display: inline-block;
-      font-size: 0.8rem;
+      font-size: 0.85rem;
       text-transform: uppercase;
       letter-spacing: 2px;
       color: var(--orange-pure);
       font-weight: 600;
-      margin-bottom: 8px;
+      margin-bottom: 10px;
+      text-align: center;
     }
     .section-title {
       font-family: 'Poppins', sans-serif;
-      font-size: 2.2rem;
+      font-size: 2.5rem;
       font-weight: 700;
       margin-bottom: 12px;
+      text-align: center;
     }
     .section-desc {
       max-width: 600px;
       color: #555;
-      margin-bottom: 40px;
+      margin: 0 auto 50px;
+      text-align: center;
     }
     .projects-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 30px;
     }
     .project-card {
       background: #fff;
-      border-radius: 20px;
+      border-radius: var(--radius);
       overflow: hidden;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
-      transition: 0.3s;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.3s;
       border: 1px solid #f0ebe6;
     }
-    .project-card:hover { transform: translateY(-6px); box-shadow: 0 12px 32px rgba(204, 85, 0, 0.12); }
+    .project-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-lg);
+    }
     .project-card img {
       width: 100%;
-      height: 200px;
+      height: 220px;
       object-fit: cover;
+      transition: transform 0.5s;
+    }
+    .project-card:hover img {
+      transform: scale(1.05);
     }
     .project-card .info {
-      padding: 20px;
+      padding: 24px;
+      text-align: center;
     }
     .project-card .tag {
       display: inline-block;
       background: var(--orange-bg);
-      padding: 4px 14px;
+      padding: 6px 16px;
       border-radius: 30px;
       font-size: 0.75rem;
       font-weight: 600;
       color: var(--orange-pure);
-      margin-bottom: 8px;
+      margin-bottom: 10px;
     }
     .project-card h3 {
       font-family: 'Poppins', sans-serif;
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       font-weight: 600;
+      margin-bottom: 6px;
     }
     .project-card p {
       color: #666;
@@ -555,20 +642,27 @@
     /* ===== TÉMOIGNAGES ===== */
     .testimonials-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 30px;
     }
     .testimonial-card {
       background: #fff;
       padding: 30px;
-      border-radius: 20px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm);
       border: 1px solid #f0ebe6;
+      text-align: center;
+      transition: all 0.3s;
+    }
+    .testimonial-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
     }
     .testimonial-card .stars {
       color: var(--orange-pure);
-      font-size: 1.2rem;
-      letter-spacing: 2px;
+      font-size: 1.3rem;
+      letter-spacing: 3px;
+      margin-bottom: 10px;
     }
     .testimonial-card .quote {
       font-style: italic;
@@ -578,13 +672,15 @@
     .testimonial-author {
       display: flex;
       align-items: center;
+      justify-content: center;
       gap: 14px;
     }
     .testimonial-author img {
-      width: 48px;
-      height: 48px;
+      width: 50px;
+      height: 50px;
       border-radius: 50%;
       object-fit: cover;
+      border: 2px solid var(--orange-light);
     }
     .testimonial-author strong {
       display: block;
@@ -603,7 +699,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0,0,0,0.92);
+      background: rgba(0,0,0,0.9);
       z-index: 999;
       justify-content: center;
       align-items: center;
@@ -637,90 +733,104 @@
     footer {
       background: #1a1a1a;
       color: #ccc;
-      padding: 40px 0;
+      padding: 50px 0;
       text-align: center;
+      margin-top: auto;
     }
     footer h3 {
       color: #fff;
       font-family: 'Poppins', sans-serif;
-      font-size: 1.5rem;
-      margin-bottom: 12px;
+      font-size: 1.6rem;
+      margin-bottom: 16px;
     }
     .socials {
       display: flex;
       justify-content: center;
-      gap: 20px;
-      margin: 16px 0 20px;
+      gap: 24px;
+      margin: 20px 0 30px;
     }
     .socials a {
-      font-size: 1.6rem;
-      transition: 0.2s;
+      font-size: 1.8rem;
+      transition: all 0.2s;
       color: #fff;
     }
-    .socials a:hover { opacity: 0.7; transform: scale(1.1); color: var(--orange-light); }
+    .socials a:hover {
+      opacity: 0.7;
+      transform: scale(1.1);
+      color: var(--orange-light);
+    }
     .bottom {
-      font-size: 0.85rem;
+      font-size: 0.9rem;
       border-top: 1px solid #333;
-      padding-top: 20px;
-      margin-top: 10px;
+      padding-top: 25px;
       color: #888;
     }
 
     /* ===== RESPONSIVE ===== */
-    @media (max-width: 1200px) {
-      .hero-content h1 { font-size: 3rem; }
-      .hero-image img { height: auto; }
-    }
-
     @media (max-width: 1024px) {
-      .hero-content h1 { font-size: 2.8rem; }
+      .hero .container {
+        flex-direction: column-reverse;
+        text-align: center;
+      }
+      .hero-content {
+        flex: 1 1 auto;
+      }
+      .hero-image {
+        max-width: 400px;
+      }
+      .carousel-track {
+        height: 350px;
+      }
     }
 
     @media (max-width: 768px) {
-      .nav-links { display: none; }
-      .burger { display: flex; }
-      .hero .container { flex-direction: column-reverse; text-align: center; }
-      .hero-content h1 { font-size: 2.5rem; }
-      .hero-content .surnoms { justify-content: center; }
-      
-      .hero-image {
-        width: 100%;
-        max-width: 500px;
-        margin: 0 auto;
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: #fff;
+        flex-direction: column;
+        padding: 20px;
+        box-shadow: var(--shadow-md);
+        gap: 16px;
+        text-align: center;
+        border-radius: 0 0 20px 20px;
       }
-      .hero-image img {
-        width: 100%;
-        height: auto;
+      .nav-links.open {
+        display: flex;
       }
-      
-      .carousel-3d { height: 350px; }
-      .projects-grid { grid-template-columns: 1fr; }
-      .testimonials-grid { grid-template-columns: 1fr; }
-      .narroq-banner { flex-direction: column; text-align: center; }
-    }
-
-    @media (max-width: 600px) {
-      .hero-content h1 { font-size: 2.2rem; }
-      .carousel-3d { height: 300px; }
-      .carousel-controls button { width: 44px; height: 44px; font-size: 1.2rem; }
-      .project-card img { height: 180px; }
+      .burger {
+        display: flex;
+      }
+      .hero-content h1 {
+        font-size: 2.5rem;
+      }
+      .carousel-track {
+        height: 300px;
+      }
+      .section-title {
+        font-size: 2rem;
+      }
     }
 
     @media (max-width: 480px) {
-      .hero-content h1 { font-size: 1.8rem; }
-      .carousel-3d { height: 250px; }
-      .carousel-controls button { width: 38px; height: 38px; font-size: 1rem; }
-      .btn { padding: 10px 22px; font-size: 0.85rem; }
-      .section-title { font-size: 1.8rem; }
-      .project-card img { height: 160px; }
-    }
-
-    @media (max-width: 380px) {
-      .hero-content h1 { font-size: 1.5rem; }
-      .carousel-3d { height: 220px; }
-      .carousel-controls button { width: 34px; height: 34px; font-size: 0.8rem; }
-      .logo img { height: 32px; }
-      .project-card img { height: 140px; }
+      .hero-content h1 {
+        font-size: 2rem;
+      }
+      .carousel-track {
+        height: 250px;
+      }
+      .carousel-controls button {
+        width: 44px;
+        height: 44px;
+        font-size: 1.1rem;
+      }
+      .btn {
+        padding: 12px 24px;
+        font-size: 0.9rem;
+      }
     }
   </style>
 </head>
@@ -732,14 +842,14 @@
     <a href="index.html" class="logo" aria-label="Accueil Ezechiel Design">
       <img src="https://res.cloudinary.com/nyke7lhc/image/upload/v1785027102/image_0_bm09fx.png" alt="Logo Ezechiel Tchokponhoue - Designer et Développeur" loading="lazy">
     </a>
-    <nav class="nav-links" aria-label="Navigation principale">
+    <nav class="nav-links" id="navLinks" aria-label="Navigation principale">
       <a href="index.html" class="active">Accueil</a>
       <a href="projects.html">Projet</a>
       <a href="testimonials.html">Témoignages</a>
       <a href="about.html">A propos</a>
       <a href="contact.html">Contact</a>
     </nav>
-    <button class="burger" aria-label="Menu mobile"><span></span><span></span><span></span></button>
+    <button class="burger" id="burgerBtn" aria-label="Menu mobile"><span></span><span></span><span></span></button>
   </div>
 </header>
 
@@ -758,9 +868,9 @@
         <span><i class="fas fa-palette"></i> NEXTGEN</span>
         <span><i class="fas fa-palette"></i> WAOUESSE</span>
       </div>
-      <div style="display: flex; gap: 12px; flex-wrap: wrap;">
-        <a href="#carousel" class="btn btn-primary">Voir ma galerie</a>
-        <a href="projects.html" class="btn btn-primary">Mes projets</a>
+      <div class="cta-buttons">
+        <a href="#carousel" class="btn btn-primary">Voir mon portfolio</a>
+        <a href="projects.html" class="btn btn-outline">Mes projets</a>
         <a href="https://waouesse.vercel.app/luc" class="btn btn-primary">WAOUESSE</a>
       </div>
     </div>
@@ -772,23 +882,21 @@
                 https://res.cloudinary.com/nyke7lhc/image/upload/w_600/v1785260314/soes_ovdex7.webp 600w,
                 https://res.cloudinary.com/nyke7lhc/image/upload/w_800/v1785260314/soes_ovdex7.webp 800w,
                 https://res.cloudinary.com/nyke7lhc/image/upload/v1785260314/soes_ovdex7.webp 1200w"
-        sizes="(max-width: 380px) 300px, (max-width: 480px) 400px, (max-width: 768px) 600px, (max-width: 1024px) 800px, 1200px"
+        sizes="(max-width: 480px) 300px, (max-width: 768px) 600px, 800px"
         alt="Ezechiel Tchokponhoue - Développeur Web et Designer Graphique basé au Bénin" 
         loading="eager"
-        width="100%"
-        height="auto"
       />
     </div>
   </div>
 </section>
 
-<!-- ===== CARROUSEL SIMPLE ===== -->
+<!-- ===== PORTFOLIO VISUEL (CARROUSEL SIMPLE) ===== -->
 <section class="carousel-section" id="carousel" aria-labelledby="carousel-title">
   <div class="container">
-    <h2 id="carousel-title" class="section-title">Galerie</h2>
-    <p class="section-desc" style="text-align:center; max-width:600px; margin-left:auto; margin-right:auto;">Découvrez mes photos — cliquez sur une image pour l'agrandir</p>
+    <h2 id="carousel-title" class="section-title">Portfolio visuel</h2>
+    <p class="section-desc">Quelques réalisations – cliquez sur une image pour l'agrandir</p>
     
-    <div class="carousel-3d" id="carousel3d">
+    <div class="carousel-wrapper">
       <div class="carousel-track" id="carouselTrack">
         <!-- Les slides sont générées par JavaScript -->
       </div>
@@ -809,14 +917,12 @@
 </div>
 
 <!-- ===== BANNIÈRE NARROQ ===== -->
-<section style="padding: 0 20px 40px;" aria-label="Bannière Narroq">
-  <div class="container">
-    <div class="narroq-banner">
-      <div class="narroq-track" role="img" aria-label="Logo Narroq"></div>
-      <div class="narroq-content">
-        <h2>L'équipe Narroq</h2>
-        <p>Image &amp; Produits — Développement Full Stack</p>
-      </div>
+<section style="padding: 20px;" aria-label="Bannière Narroq">
+  <div class="narroq-banner">
+    <div class="narroq-track" role="img" aria-label="Logo Narroq"></div>
+    <div class="narroq-content">
+      <h2>L'équipe Narroq</h2>
+      <p>Image &amp; Produits — Développement Full Stack</p>
     </div>
   </div>
 </section>
@@ -826,7 +932,7 @@
   <div class="container">
     <span class="section-eyebrow">Mes réalisations</span>
     <h2 id="projects-title" class="section-title">Projets récents</h2>
-    <p class="section-desc">Un aperçu de mes derniers travaux en identité visuelle, logo design et branding pour des marques et entrepreneurs.</p>
+    <p class="section-desc">Un aperçu de mes derniers travaux en identité visuelle, logo design et branding.</p>
     <div class="projects-grid">
       <article class="project-card">
         <img 
@@ -836,7 +942,7 @@
                   https://res.cloudinary.com/nyke7lhc/image/upload/w_600/v1785027952/Architecture_Backend___Microservices_Map._202606040138_y8crwr.jpg 600w,
                   https://res.cloudinary.com/nyke7lhc/image/upload/w_800/v1785027952/Architecture_Backend___Microservices_Map._202606040138_y8crwr.jpg 800w,
                   https://res.cloudinary.com/nyke7lhc/image/upload/v1785027952/Architecture_Backend___Microservices_Map._202606040138_y8crwr.jpg 1200w"
-          sizes="(max-width: 380px) 300px, (max-width: 480px) 400px, (max-width: 768px) 600px, 800px"
+          sizes="(max-width: 480px) 300px, (max-width: 768px) 600px, 800px"
           alt="Projet Neekle Studio - Branding" 
           loading="lazy"
         />
@@ -854,7 +960,7 @@
                   https://res.cloudinary.com/nyke7lhc/image/upload/w_600/v1785034206/COLOR_slj6vm.jpg 600w,
                   https://res.cloudinary.com/nyke7lhc/image/upload/w_800/v1785034206/COLOR_slj6vm.jpg 800w,
                   https://res.cloudinary.com/nyke7lhc/image/upload/v1785034206/COLOR_slj6vm.jpg 1200w"
-          sizes="(max-width: 380px) 300px, (max-width: 480px) 400px, (max-width: 768px) 600px, 800px"
+          sizes="(max-width: 480px) 300px, (max-width: 768px) 600px, 800px"
           alt="Projet Findle Client - Logo Design" 
           loading="lazy"
         />
@@ -872,7 +978,7 @@
                   https://res.cloudinary.com/nyke7lhc/image/upload/w_600/v1785027102/image_0_bm09fx.png 600w,
                   https://res.cloudinary.com/nyke7lhc/image/upload/w_800/v1785027102/image_0_bm09fx.png 800w,
                   https://res.cloudinary.com/nyke7lhc/image/upload/v1785027102/image_0_bm09fx.png 1200w"
-          sizes="(max-width: 380px) 300px, (max-width: 480px) 400px, (max-width: 768px) 600px, 800px"
+          sizes="(max-width: 480px) 300px, (max-width: 768px) 600px, 800px"
           alt="Projet Neetale - Identité visuelle" 
           loading="lazy"
         />
@@ -884,7 +990,7 @@
       </article>
     </div>
     <p class="text-center mt-40">
-      <a href="projects.html" class="btn btn-primary">Voir tous les projets</a>
+      <a href="projects.html" class="btn btn-outline">Voir tous les projets</a>
     </p>
   </div>
 </section>
@@ -949,7 +1055,7 @@
       </article>
     </div>
     <p class="text-center mt-40">
-      <a href="testimonials.html" class="btn btn-primary">Voir tous les avis</a>
+      <a href="testimonials.html" class="btn btn-outline">Voir tous les avis</a>
     </p>
   </div>
 </section>
@@ -970,26 +1076,22 @@
 
 <script>
   // ===== MENU BURGER =====
-  document.querySelector('.burger')?.addEventListener('click', function() {
-    const nav = document.querySelector('.nav-links');
-    if (nav) {
-      nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
-    }
+  const burgerBtn = document.getElementById('burgerBtn');
+  const navLinks = document.getElementById('navLinks');
+  burgerBtn.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+    burgerBtn.classList.toggle('active');
   });
 
-  // ===== CARROUSEL SIMPLE =====
+  // ===== CARROUSEL SIMPLE (3 photos) =====
   const images = [
     { src: 'https://res.cloudinary.com/nyke7lhc/image/upload/v1785260314/soes_ovdex7.webp', label: 'Ezechiel Tchokponhoue' },
     { src: 'https://res.cloudinary.com/nyke7lhc/image/upload/v1785535382/Nouveau%20dossier%20%282%29/sezs_bultbt.webp', label: 'Logo Ezechiel Design' },
-    { src: 'https://res.cloudinary.com/nyke7lhc/image/upload/v1785535390/Nouveau%20dossier%20%282%29/portfol_mtbevy.webp', label: 'Portrait professionnel' },
-    { src: 'https://res.cloudinary.com/nyke7lhc/image/upload/v1785641353/tchokponhoueezechiel_m6dzkr.webp', label: 'Ezechiel Tchokponhoue 2021' },
-    { src: 'https://res.cloudinary.com/nyke7lhc/image/upload/v1785641030/Untitled-1_copy_copie_b74sww.webp', label: 'ezechiel tchokponhoue 2022 technicien' },
-    { src: 'https://res.cloudinary.com/nyke7lhc/image/upload/v1785642472/tchokponhoue_ezechiel_sap71r.webp', label: 'Architecture Backend' },
-    { src: 'https://res.cloudinary.com/nyke7lhc/image/upload/v1785641356/ezechieltchokponhouee_na8uew.webp', label: 'Architecture Backend' }
+    { src: 'https://res.cloudinary.com/nyke7lhc/image/upload/v1785535390/Nouveau%20dossier%20%282%29/portfol_mtbevy.webp', label: 'Portrait professionnel' }
   ];
 
   const track = document.getElementById('carouselTrack');
-  const indicators = document.getElementById('indicators');
+  const indicatorsContainer = document.getElementById('indicators');
   let currentIndex = 0;
   const totalSlides = images.length;
 
@@ -1003,9 +1105,8 @@
         srcset="${img.src.replace('/upload/', '/upload/w_300/')} 300w,
                 ${img.src.replace('/upload/', '/upload/w_400/')} 400w,
                 ${img.src.replace('/upload/', '/upload/w_600/')} 600w,
-                ${img.src.replace('/upload/', '/upload/w_800/')} 800w,
-                ${img.src} 1200w"
-        sizes="(max-width: 380px) 300px, (max-width: 480px) 400px, (max-width: 768px) 600px, 800px"
+                ${img.src.replace('/upload/', '/upload/w_800/')} 800w"
+        sizes="(max-width: 480px) 300px, (max-width: 768px) 600px, 800px"
         alt="${img.label}" 
         loading="lazy"
       >
@@ -1017,13 +1118,14 @@
     });
     track.appendChild(slide);
 
+    // Indicateur
     const dot = document.createElement('button');
     dot.className = 'dot';
     dot.dataset.index = i;
     dot.setAttribute('role', 'tab');
     dot.setAttribute('aria-label', `Photo ${i+1}`);
     dot.addEventListener('click', () => goToSlide(i));
-    indicators.appendChild(dot);
+    indicatorsContainer.appendChild(dot);
   });
 
   function updateCarousel() {
@@ -1041,11 +1143,11 @@
   document.getElementById('prevBtn').addEventListener('click', () => goToSlide(currentIndex - 1));
   document.getElementById('nextBtn').addEventListener('click', () => goToSlide(currentIndex + 1));
 
-  let autoPlay = setInterval(() => goToSlide(currentIndex + 1), 4000);
-  const carouselElement = document.querySelector('.carousel-3d');
-  carouselElement.addEventListener('mouseenter', () => clearInterval(autoPlay));
-  carouselElement.addEventListener('mouseleave', () => {
-    autoPlay = setInterval(() => goToSlide(currentIndex + 1), 4000);
+  let autoPlay = setInterval(() => goToSlide(currentIndex + 1), 5000);
+  const carouselWrapper = document.querySelector('.carousel-wrapper');
+  carouselWrapper.addEventListener('mouseenter', () => clearInterval(autoPlay));
+  carouselWrapper.addEventListener('mouseleave', () => {
+    autoPlay = setInterval(() => goToSlide(currentIndex + 1), 5000);
   });
 
   updateCarousel();
