@@ -69,31 +69,6 @@
       --dark: #1a1a1a;
     }
 
-    /* ===== BOUTONS ===== */
-    .btn {
-      display: inline-block;
-      padding: 12px 30px;
-      border-radius: 50px;
-      font-weight: 600;
-      font-size: 0.95rem;
-      transition: 0.3s ease;
-      border: 2px solid transparent;
-      cursor: pointer;
-      text-align: center;
-    }
-    .btn-primary {
-      background: var(--orange-gradient);
-      color: #fff;
-      border-color: var(--orange-pure);
-    }
-    .btn-primary:hover { background: var(--orange-dark); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(232, 107, 26, 0.3); }
-    .btn-outline {
-      background: transparent;
-      color: var(--orange-pure);
-      border-color: var(--orange-pure);
-    }
-    .btn-outline:hover { background: var(--orange-pure); color: #fff; }
-
     /* ===== NAVBAR ===== */
     .navbar {
       background: #fff;
@@ -127,10 +102,6 @@
     }
     .nav-links a:hover,
     .nav-links a.active { color: var(--orange-pure); }
-    .nav-auth {
-      display: flex;
-      gap: 12px;
-    }
     .burger {
       display: none;
       flex-direction: column;
@@ -453,17 +424,6 @@
         z-index: 999;
       }
       .nav-links.open { display: flex; }
-      .nav-auth {
-        display: none;
-        flex-direction: column;
-        gap: 10px;
-        margin-top: 10px;
-        width: 100%;
-      }
-      .nav-auth.mobile-show {
-        display: flex;
-      }
-      .nav-auth.mobile-show .btn { width: 100%; justify-content: center; }
 
       .about-grid {
         grid-template-columns: 1fr;
@@ -606,10 +566,6 @@
         <a href="about.html" class="active">À propos</a>
         <a href="contact.html">Contact</a>
       </nav>
-      <div class="nav-auth">
-        <a href="login.html" class="btn btn-outline">Connexion</a>
-        <a href="signup.html" class="btn btn-primary">Inscription</a>
-      </div>
       <button class="burger" id="burgerBtn" aria-label="Menu">
         <span></span><span></span><span></span>
       </button>
