@@ -15,15 +15,15 @@
   
   <!-- ===== TITRE SEO ===== -->
   <title>Ezechiel Tchokponhoue | Développeur Web & Designer | Bénin</title>
-  <meta name="description" content="Ezechiel Tchokponhoue, alias Fatez. Développeur web et designer graphique basé au Bénin. Membre de NARROQ, PROPPESE et EZELABS. Création de solutions digitales sur mesure.">
-  <meta name="keywords" content="Ezechiel Tchokponhoue, Fatez, développeur web Bénin, designer graphique Bénin, NARROQ, PROPPESE, EZELABS, création site web, identité visuelle, branding, Ouesse Bénin">
+  <meta name="description" content="Ezechiel Tchokponhoue, alias Fatez. Développeur web et designer graphique basé au Bénin. Solutions digitales performantes et identités visuelles fortes.">
+  <meta name="keywords" content="Ezechiel Tchokponhoue, Fatez, développeur web Bénin, designer graphique Bénin, NARROQ, EZELABS, création site web, identité visuelle, branding, Ouesse Bénin">
   <meta name="author" content="Ezechiel Tchokponhoue">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
   <link rel="canonical" href="https://ezechiel-design.com/">
   
   <!-- ===== OPEN GRAPH / SOCIAL MEDIA ===== -->
   <meta property="og:title" content="Ezechiel Tchokponhoue | Développeur Web & Designer | Bénin">
-  <meta property="og:description" content="Ezechiel Tchokponhoue, alias Fatez. Développeur web et designer graphique basé au Bénin. Membre de NARROQ, PROPPESE et EZELABS.">
+  <meta property="og:description" content="Ezechiel Tchokponhoue, alias Fatez. Développeur web et designer graphique basé au Bénin. Solutions digitales performantes et identités visuelles fortes.">
   <meta property="og:image" content="https://res.cloudinary.com/nyke7lhc/image/upload/v1785260314/soes_ovdex7.webp">
   <meta property="og:url" content="https://ezechiel-design.com/">
   <meta property="og:type" content="website">
@@ -36,7 +36,7 @@
   <meta name="twitter:description" content="Ezechiel Tchokponhoue, alias Fatez. Développeur web et designer graphique basé au Bénin.">
   <meta name="twitter:image" content="https://res.cloudinary.com/nyke7lhc/image/upload/v1785260314/soes_ovdex7.webp">
   
-  <!-- ===== ROBOTS.TXT (via balise meta + lien) ===== -->
+  <!-- ===== ROBOTS.TXT ===== -->
   <link rel="robots" href="robots.txt" type="text/plain">
   
   <!-- ===== SITEMAP ===== -->
@@ -185,8 +185,8 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Inter', sans-serif;
-      background: #faf9f8;
-      color: #1e1e1e;
+      background: #fafaf8;
+      color: #1a1a1a;
       line-height: 1.6;
       display: flex;
       flex-direction: column;
@@ -200,50 +200,56 @@
     a { text-decoration: none; color: inherit; }
     img { max-width: 100%; display: block; height: auto; }
 
-    /* ===== PALETTE ORANGE ===== */
+    /* ===== PALETTE VERT NIGÉRIAN ===== */
     :root {
-      --orange-dark: #cc5500;
-      --orange-pure: #e86b1a;
-      --orange-light: #f5a05c;
-      --orange-bg: #fff0e6;
-      --orange-gradient: linear-gradient(135deg, #e86b1a, #cc5500);
+      --primary: #008751;        /* vert nigérian */
+      --primary-dark: #005a32;
+      --primary-light: #e6f2ed;
+      --accent: #D4AF37;        /* doré discret */
+      --accent-hover: #b8962e;
+      --text-dark: #1a1a1a;
+      --text-muted: #555;
+      --bg-light: #fafaf8;
+      --bg-card: #ffffff;
       --shadow-sm: 0 4px 12px rgba(0,0,0,0.05);
       --shadow-md: 0 8px 24px rgba(0,0,0,0.08);
-      --shadow-lg: 0 20px 60px rgba(204, 85, 0, 0.15);
-      --radius: 20px;
+      --shadow-lg: 0 20px 60px rgba(0,0,0,0.12);
+      --radius: 18px;
+      --transition: 0.3s ease;
     }
 
     /* ===== BOUTONS ===== */
     .btn {
       display: inline-block;
-      padding: 14px 32px;
+      padding: 13px 30px;
       border-radius: 50px;
       font-weight: 600;
-      font-size: 1rem;
-      transition: all 0.3s ease;
+      font-size: 0.95rem;
+      transition: all var(--transition);
       border: 2px solid transparent;
       cursor: pointer;
       text-align: center;
       letter-spacing: 0.3px;
     }
     .btn-primary {
-      background: var(--orange-gradient);
+      background: var(--primary);
       color: #fff;
-      border-color: var(--orange-pure);
-      box-shadow: 0 6px 18px rgba(232, 107, 26, 0.3);
+      border-color: var(--primary);
+      box-shadow: 0 6px 18px rgba(0,135,81,0.25);
     }
     .btn-primary:hover {
-      background: var(--orange-dark);
+      background: var(--primary-dark);
+      border-color: var(--primary-dark);
       transform: translateY(-3px);
-      box-shadow: 0 12px 28px rgba(232, 107, 26, 0.4);
+      box-shadow: 0 12px 28px rgba(0,135,81,0.35);
     }
     .btn-outline {
       background: transparent;
-      color: var(--orange-pure);
-      border-color: var(--orange-pure);
+      color: var(--primary);
+      border-color: var(--primary);
     }
     .btn-outline:hover {
-      background: var(--orange-pure);
+      background: var(--primary);
       color: #fff;
       transform: translateY(-3px);
     }
@@ -267,7 +273,7 @@
     .logo img {
       height: 45px;
       width: auto;
-      transition: transform 0.3s;
+      transition: transform var(--transition);
     }
     .logo:hover img { transform: scale(1.05); }
     .nav-links {
@@ -277,8 +283,8 @@
       align-items: center;
     }
     .nav-links a {
-      color: #1e1e1e;
-      transition: 0.2s;
+      color: var(--text-dark);
+      transition: color 0.2s;
       position: relative;
     }
     .nav-links a::after {
@@ -288,15 +294,15 @@
       left: 0;
       width: 0;
       height: 2px;
-      background: var(--orange-pure);
-      transition: width 0.3s;
+      background: var(--primary);
+      transition: width var(--transition);
     }
     .nav-links a:hover::after,
     .nav-links a.active::after {
       width: 100%;
     }
     .nav-links a:hover,
-    .nav-links a.active { color: var(--orange-pure); }
+    .nav-links a.active { color: var(--primary); }
     .burger {
       display: none;
       flex-direction: column;
@@ -308,16 +314,16 @@
     .burger span {
       width: 28px;
       height: 3px;
-      background: #1e1e1e;
+      background: var(--text-dark);
       border-radius: 4px;
       transition: 0.3s;
     }
-    .burger:hover span { background: var(--orange-pure); }
+    .burger:hover span { background: var(--primary); }
 
     /* ===== HERO ===== */
     .hero {
-      background: var(--orange-bg);
-      min-height: 85vh;
+      background: var(--bg-light);
+      min-height: 80vh;
       display: flex;
       align-items: center;
       padding: 60px 0;
@@ -327,11 +333,11 @@
     .hero::before {
       content: '';
       position: absolute;
-      top: -50%;
-      right: -20%;
-      width: 600px;
-      height: 600px;
-      background: rgba(232, 107, 26, 0.08);
+      top: -20%;
+      right: -10%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(0,135,81,0.08) 0%, transparent 70%);
       border-radius: 50%;
     }
     .hero .container {
@@ -349,7 +355,7 @@
     }
     .hero-content .badge {
       display: inline-block;
-      background: var(--orange-pure);
+      background: var(--primary);
       color: #fff;
       font-size: 0.8rem;
       font-weight: 600;
@@ -364,15 +370,15 @@
       font-size: clamp(2.5rem, 5vw, 4rem);
       font-weight: 900;
       line-height: 1.1;
-      color: #1e1e1e;
+      color: var(--text-dark);
     }
     .hero-content h1 .highlight {
-      color: var(--orange-pure);
+      color: var(--primary);
     }
     .hero-content .subtitle {
       font-size: 1.3rem;
       font-weight: 500;
-      color: #444;
+      color: var(--text-muted);
       margin: 16px 0 24px;
     }
     .hero-content .surnoms {
@@ -391,10 +397,10 @@
       border-radius: 30px;
       font-weight: 600;
       font-size: 0.9rem;
-      color: var(--orange-pure);
-      border: 1px solid var(--orange-light);
-      box-shadow: 0 2px 8px rgba(232, 107, 26, 0.08);
-      transition: transform 0.2s;
+      color: var(--primary);
+      border: 1px solid var(--primary);
+      box-shadow: var(--shadow-sm);
+      transition: transform var(--transition);
     }
     .hero-content .surnoms span:hover {
       transform: translateY(-3px);
@@ -423,7 +429,7 @@
       transform: scale(1.03);
     }
 
-    /* ===== CARROUSEL SIMPLE ===== */
+    /* ===== PORTFOLIO VISUEL (CARROUSEL SIMPLE) ===== */
     .carousel-section {
       padding: 80px 0;
       background: #fff;
@@ -433,11 +439,11 @@
       font-family: 'Poppins', sans-serif;
       font-size: 2.5rem;
       font-weight: 700;
-      color: #1e1e1e;
+      color: var(--text-dark);
       margin-bottom: 8px;
     }
     .carousel-section .section-desc {
-      color: #666;
+      color: var(--text-muted);
       margin-bottom: 40px;
       max-width: 600px;
       margin-left: auto;
@@ -494,7 +500,7 @@
       margin-top: 30px;
     }
     .carousel-controls button {
-      background: var(--orange-gradient);
+      background: var(--primary);
       color: #fff;
       border: none;
       width: 50px;
@@ -503,11 +509,11 @@
       font-size: 1.3rem;
       cursor: pointer;
       transition: all 0.3s;
-      box-shadow: 0 4px 16px rgba(232, 107, 26, 0.25);
+      box-shadow: 0 4px 16px rgba(0,135,81,0.25);
     }
     .carousel-controls button:hover {
       transform: scale(1.1);
-      background: var(--orange-dark);
+      background: var(--primary-dark);
     }
 
     .carousel-indicators {
@@ -526,7 +532,7 @@
       transition: all 0.3s;
     }
     .carousel-indicators .dot.active {
-      background: var(--orange-pure);
+      background: var(--primary);
       transform: scale(1.3);
     }
 
@@ -553,22 +559,22 @@
     .narroq-content h2 {
       font-family: 'Poppins', sans-serif;
       font-size: 1.8rem;
-      color: #1e1e1e;
+      color: var(--text-dark);
     }
     .narroq-content p {
-      color: #555;
+      color: var(--text-muted);
     }
 
     /* ===== PROJETS ===== */
     .section { padding: 80px 0; }
     .section-light { background: #fff; }
-    .section-tint { background: var(--orange-bg); }
+    .section-tint { background: var(--primary-light); }
     .section-eyebrow {
       display: inline-block;
       font-size: 0.85rem;
       text-transform: uppercase;
       letter-spacing: 2px;
-      color: var(--orange-pure);
+      color: var(--primary);
       font-weight: 600;
       margin-bottom: 10px;
       text-align: center;
@@ -579,10 +585,11 @@
       font-weight: 700;
       margin-bottom: 12px;
       text-align: center;
+      color: var(--text-dark);
     }
     .section-desc {
       max-width: 600px;
-      color: #555;
+      color: var(--text-muted);
       margin: 0 auto 50px;
       text-align: center;
     }
@@ -592,11 +599,11 @@
       gap: 30px;
     }
     .project-card {
-      background: #fff;
+      background: var(--bg-card);
       border-radius: var(--radius);
       overflow: hidden;
       box-shadow: var(--shadow-sm);
-      transition: all 0.3s;
+      transition: all var(--transition);
       border: 1px solid #f0ebe6;
     }
     .project-card:hover {
@@ -618,12 +625,12 @@
     }
     .project-card .tag {
       display: inline-block;
-      background: var(--orange-bg);
+      background: var(--primary-light);
       padding: 6px 16px;
       border-radius: 30px;
       font-size: 0.75rem;
       font-weight: 600;
-      color: var(--orange-pure);
+      color: var(--primary);
       margin-bottom: 10px;
     }
     .project-card h3 {
@@ -633,7 +640,7 @@
       margin-bottom: 6px;
     }
     .project-card p {
-      color: #666;
+      color: var(--text-muted);
       font-size: 0.95rem;
     }
     .text-center { text-align: center; }
@@ -646,20 +653,20 @@
       gap: 30px;
     }
     .testimonial-card {
-      background: #fff;
+      background: var(--bg-card);
       padding: 30px;
       border-radius: var(--radius);
       box-shadow: var(--shadow-sm);
       border: 1px solid #f0ebe6;
       text-align: center;
-      transition: all 0.3s;
+      transition: all var(--transition);
     }
     .testimonial-card:hover {
       transform: translateY(-5px);
       box-shadow: var(--shadow-md);
     }
     .testimonial-card .stars {
-      color: var(--orange-pure);
+      color: var(--accent);
       font-size: 1.3rem;
       letter-spacing: 3px;
       margin-bottom: 10px;
@@ -680,7 +687,7 @@
       height: 50px;
       border-radius: 50%;
       object-fit: cover;
-      border: 2px solid var(--orange-light);
+      border: 2px solid var(--primary);
     }
     .testimonial-author strong {
       display: block;
@@ -688,7 +695,7 @@
     }
     .testimonial-author span {
       font-size: 0.85rem;
-      color: #777;
+      color: var(--text-muted);
     }
 
     /* ===== MODALE ===== */
@@ -757,7 +764,7 @@
     .socials a:hover {
       opacity: 0.7;
       transform: scale(1.1);
-      color: var(--orange-light);
+      color: var(--primary);
     }
     .bottom {
       font-size: 0.9rem;
@@ -859,13 +866,11 @@
     <div class="hero-content">
       <span class="badge"><i class="fas fa-code"></i> Développeur & Designer</span>
       <h1 id="hero-title">Ezechiel <span class="highlight">Tchokponhoue</span></h1>
-      <p class="subtitle">Créateur de solutions digitales sur mesure</p>
+      <p class="subtitle">Des solutions digitales performantes et des identités visuelles fortes</p>
       <div class="surnoms">
         <span><i class="fas fa-tag"></i> FATEZ</span>
         <span><i class="fas fa-users"></i> NARROQ</span>
-        <span><i class="fas fa-flask"></i> PROPPESE</span>
         <span><i class="fas fa-rocket"></i> EZEGLABS</span>
-        <span><i class="fas fa-palette"></i> NEXTGEN</span>
         <span><i class="fas fa-palette"></i> WAOUESSE</span>
       </div>
       <div class="cta-buttons">
