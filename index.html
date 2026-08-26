@@ -507,10 +507,8 @@
   </style>
 </head>
 <body>
-  <!-- Canvas pour effet d'arrière-plan -->
   <canvas id="bgCanvas"></canvas>
 
-  <!-- NAVBAR -->
   <header class="navbar">
     <div class="container">
       <a href="index.html" class="logo">Ezechiel Design</a>
@@ -528,7 +526,6 @@
     </div>
   </header>
 
-  <!-- HERO : HOOK + STORY + VALUE + CTA -->
   <section class="hero">
     <div class="container">
       <span class="badge"><i class="fas fa-code"></i> Développeur & Designer</span>
@@ -553,7 +550,6 @@
     </div>
   </section>
 
-  <!-- STORY / MON HISTOIRE -->
   <section class="section" id="story">
     <div class="container">
       <h2 class="section-title">Mon histoire</h2>
@@ -583,7 +579,6 @@
     </div>
   </section>
 
-  <!-- SERVICES (VALUE) -->
   <section class="section" id="services" style="background: #f9f9f9;">
     <div class="container">
       <h2 class="section-title">Mes services</h2>
@@ -608,7 +603,6 @@
     </div>
   </section>
 
-  <!-- PROJETS -->
   <section class="section" id="projets">
     <div class="container">
       <h2 class="section-title">Projets récents</h2>
@@ -642,7 +636,6 @@
     </div>
   </section>
 
-  <!-- TÉMOIGNAGES -->
   <section class="section" id="temoignages" style="background: #f9f9f9;">
     <div class="container">
       <h2 class="section-title">Ils me font confiance</h2>
@@ -676,7 +669,6 @@
     </div>
   </section>
 
-  <!-- CONTACT / CTA -->
   <section class="section" id="contact">
     <div class="container">
       <h2 class="section-title">Travaillons ensemble</h2>
@@ -687,7 +679,6 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer>
     <div class="container">
       <h3>Tchokponhoue Ezechiel</h3>
@@ -702,14 +693,12 @@
   </footer>
 
   <script>
-    // ===== MENU BURGER =====
     const burgerBtn = document.getElementById('burgerBtn');
     const navLinks = document.getElementById('navLinks');
     burgerBtn.addEventListener('click', () => {
       navLinks.classList.toggle('open');
     });
 
-    // ===== EFFET D'ARRIÈRE-PLAN (particules vertes et jaunes) =====
     const canvas = document.getElementById('bgCanvas');
     const ctx = canvas.getContext('2d');
     let particles = [];
